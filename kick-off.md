@@ -1,5 +1,6 @@
 #Tasks
   - Cheatsheet für Grundlagen + Aliasse
+    - http://www.git-tower.com/blog/git-cheat-sheet/
     - https://github.com/tklepzig/git-init 
   - Aliasse
   - Konfigurationen (Credentials, Basics, Editor, mit Interaktionen)
