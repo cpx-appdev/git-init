@@ -22,7 +22,7 @@
   1. It opens the (in the .gitconfig defined) editor to enter the commit message
   2. To execute the commit close the editor after entering the commit message
   
-## $ git commit -a|all
+## $ git commit -a|--all
   Stages all changes in tracked files (**NOT NEW FILES**) and executes the *commit* command
 
 ## $ git commit -m|message <msg>
