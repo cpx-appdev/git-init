@@ -55,7 +55,9 @@
 
 ## $ git push
   Sends local changes to the configured remote repositories
+  
   Which contents are pushed depends on the configuration setting "push.default"
+  
   In the branches pushed to the remote, there must not exist any pending remote changes
 
 # Merge & Rebase
