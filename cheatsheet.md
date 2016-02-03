@@ -1,5 +1,8 @@
 # Create
 
+## $ git clone <remoteurl>
+  Creates a local clone of a remote repository (in TFS, the URL can be found at "Code > Clone")
+
 # Local Changes
 
 ## $ git status
@@ -31,9 +34,29 @@
   
 # Commit History
 
+## $ git log -p <file>
+  Shows a (simplified) version history for a specific file
+
+## $ git log -p <file> --full-history
+  Shows a full version history of a file
+
+## $ git blame <file>
+  Shows the detailed changes made to a file (who changed what and when, for each line the last change)
+
 # Branches & Tags
 
 # Update & Publish
+
+## $ git fetch
+  Retrieves a changes of a remote repository (if multiple remote repositories are assigned to a local one, the specific repo has to be named)
+
+## $ git pull
+  Retrieves all changes of a remote repository (see git pull) and integrates changes of a connected remote branch into the local one (changes on both sides causes a merge)
+
+## $ git push
+  Sends local changes to the configured remote repositories
+  Which contents are pushed depends on the configuration setting "push.default"
+  In the branches pushed to the remote, there must not exist any pending remote changes
 
 # Merge & Rebase
 
