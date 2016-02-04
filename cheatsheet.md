@@ -69,3 +69,6 @@
 # Merge & Rebase
 
 # Undo
+
+- git reset
+- git checkout
