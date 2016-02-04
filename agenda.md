@@ -1,2 +1,4 @@
-- -a & --all??
+- -a & --all
+- git log -p
+- glog o.ä.
 - Aliasse für alle cmds?
