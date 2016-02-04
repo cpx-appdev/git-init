@@ -68,7 +68,13 @@
 
 # Merge & Rebase
 
+## $ git merge
+  
+
 # Undo
 
-- git reset
-- git checkout
+## $ git reset
+  Reset changes from index
+  
+## $ git checkout
+  Revert changes back to commited state
