@@ -1,5 +1,8 @@
 # Create
 
+## $ git init
+  Initializes an empty repository
+
 ## $ git clone <remoteurl>
   Creates a local clone of a remote repository (in TFS, the URL can be found at "Code > Clone")
 
