@@ -14,6 +14,9 @@
 ## $ git diff
   Shows all local changes for already tracked files in your repositoy in detail
 
+## $ difftool --dir-diff
+  Start configured diff tool and showing all changes in tree view like mode
+ 
 ## $ git add <file path>
   Add changes (incl. deleting and adding) on the specified file
   
