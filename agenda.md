@@ -1,0 +1,2 @@
+- -a & --all??
+- Aliasse für alle cmds?
