@@ -51,6 +51,12 @@
 
 # Branches & Tags
 
+## $ git branch
+
+## $ git tag [-a]
+
+## $ git push --tags
+
 # Update & Publish
 
 ## $ git fetch
@@ -69,7 +75,10 @@
 # Merge & Rebase
 
 ## $ git merge
-  
+## $ git merge --ff-only
+## $ git merge --no-ff
+
+## $ git mergetool
 
 # Undo
 
