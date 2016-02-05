@@ -1,7 +1,8 @@
 #Tasks
   - Cheatsheet für Grundlagen + Aliasse
     - http://www.git-tower.com/blog/git-cheat-sheet/
-    - https://github.com/tklepzig/git-init 
+    - https://github.com/tklepzig/git-init
+    - http://byte.kde.org/~zrusin/git/git-cheat-sheet-medium.png
   - Aliasse
   - Konfigurationen (Credentials, Basics, Editor, mit Interaktionen)
   - Diff / Merge Tools und Konfiguration (Standardtool festlegen), eventuell mit Shell-Skripten
