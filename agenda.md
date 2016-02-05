@@ -3,3 +3,5 @@
   - Aliasse befüllen
 - Cheatsheet Format erstellen
 - Workflow definieren (Wann rebasen, wann mergen, etc.)
+- Präsentation der FO-Ergebnisse vorbereiten
+- Kommunikation bzgl. Workshops an TL & Co.
