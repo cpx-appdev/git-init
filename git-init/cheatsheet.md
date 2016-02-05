@@ -1,4 +1,13 @@
-<h1 id="create">Create</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello!</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="create">Create</h1>
 
 
 
@@ -175,4 +184,5 @@
 
 <h2 id="git-checkout">$ git checkout</h2>
 
-<p>Revert changes back to commited state</p>
+<p>Revert changes back to commited state</p></div></body>
+</html>
