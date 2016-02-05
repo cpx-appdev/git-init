@@ -1,2 +1,5 @@
+- HA
+  - Cheatsheet Inhalt komplettieren
+  - Aliasse befüllen
 - Cheatsheet Format erstellen
 - Workflow definieren (Wann rebasen, wann mergen, etc.)
