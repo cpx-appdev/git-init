@@ -1,6 +1,0 @@
-- -a & --all
-- git log -p
-- glog o.ä.
-- Aliasse für alle cmds?
-- sonstige Funktionen / Zusammenfassungen von Aktionen
-- Cheatsheet: Bsp.-Aufrufe für alle Cmds.
