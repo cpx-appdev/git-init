@@ -1,0 +1,2 @@
+- Cheatsheet Format erstellen
+- Workflow definieren (Wann rebasen, wann mergen, etc.)
