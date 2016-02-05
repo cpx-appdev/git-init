@@ -3,6 +3,7 @@
     - http://www.git-tower.com/blog/git-cheat-sheet/
     - https://github.com/tklepzig/git-init
     - http://byte.kde.org/~zrusin/git/git-cheat-sheet-medium.png
+    - https://marklodato.github.io/visual-git-guide/index-de.html
   - Aliasse
   - Konfigurationen (Credentials, Basics, Editor, mit Interaktionen)
   - Diff / Merge Tools und Konfiguration (Standardtool festlegen), eventuell mit Shell-Skripten
