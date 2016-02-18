@@ -17,7 +17,7 @@
 ## $ difftool --dir-diff
   Start configured diff tool and showing all changes in tree view like mode
  
-## $ git add <file path>
+## $ git add *file path*
   Add changes (incl. deleting and adding) on the specified file
   
 ## $ git add .
@@ -45,7 +45,7 @@
 ## $ git log *file*
   Shows a (simplified) version history for a specific file
 
-## $ git blame <file>
+## $ git blame *file*
   Shows the detailed changes made to a file (who changed what and when, for each line the last change)
 
 # Branches & Tags
