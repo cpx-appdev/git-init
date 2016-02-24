@@ -31,7 +31,7 @@
   **Ohne** den Parameter **-m** geht der konfigurierte Editor auf, der den Kommentar entgegennimmt und nach dem Schließen des Editors wird committed.
   **Mit** dem Parameter **-m** gibt man den Kommentar direkt auf der Kommandozeile an (bei vorhandenen Leerzeichen mit Anführungsstrichen umschließen)
 
-## $ git commit -amend
+## $ git commit --amend
   Den letzten Commit zurücksetzen und deren Änderungen wieder als lokale Änderungen einspielen, um so Dateien oder den Commit-Kommentar ändern zu können
   * ***NIEMALS BEREITS VERÖFFENTLICHTE COMMITS AMENDEN***
 
