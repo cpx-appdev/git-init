@@ -1,6 +1,7 @@
 - HA
   - Cheatsheet Inhalt komplettieren
   - Aliasse befüllen
+- Diskussion: Bash Aliasse?
 - Cheatsheet Format erstellen
 - Workflow definieren (Wann rebasen, wann mergen, etc.)
 - Präsentation der FO-Ergebnisse vorbereiten
