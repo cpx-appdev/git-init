@@ -1,4 +1,4 @@
-# Create
+# Erstellen
 
 ## $ git init
   Leeres Git Repository erstellen
@@ -6,7 +6,7 @@
 ## $ git clone *URL*
   Ein vorhandenes Git Repository klonen (URL ist im TFS unter "Code > Clone" zu finden)  
 
-# Local Changes
+# Lokale Änderungen
 
 ## $ git status
   Alle lokalen Änderungen im aktuellen Repository anzeigen (Wie *Pending Changes* im TFVC)
@@ -23,6 +23,9 @@
 ## $ git add .
   Alle Dateien ab dem aktuellen Verzeichnis (inkl. aller Unterordner) zum Committen markieren
 
+## $ git reset
+  Dateien vom Status "Bereit für Commit" entfernen (Aber Änderungen bleiben erhalten, wird nur vom *Index* entfernt)
+
 ## $ git commit [-m *Kommentar*]
   Alle zum Committen markierte Dateien Committen
   **Ohne** den Parameter **-m** geht der konfigurierte Editor auf, der den Kommentar entgegennimmt und nach dem Schließen des Editors wird committed.
@@ -32,7 +35,7 @@
   Den letzten Commit zurücksetzen und deren Änderungen wieder als lokale Änderungen einspielen, um so Dateien oder den Commit-Kommentar ändern zu können
   * ***NIEMALS BEREITS VERÖFFENTLICHTE COMMITS AMENDEN***
 
-# Commit History
+# History anzeigen
 
 ## $ git log
   History des gesamten Repository anzeigen
@@ -47,9 +50,9 @@
 
 ## $ git branch
 
-## $ git tag [-a]
+## $ git checkout
 
-## $ git push --tags
+## $ git tag [-a]
 
 # Update & Publish
 
@@ -59,9 +62,10 @@
 > ## $ git pull
    Retrieves all changes of a remote repository (see git pull) and integrates changes of a connected remote branch into the local one     (changes on both sides causes a merge)
 
-
 ## $ git push
   Alle lokalen Commits zum Remote Repository schicken
+
+## $ git push --tags
 
 # Merge & Rebase
 
@@ -71,10 +75,11 @@
 
 ## $ git mergetool
 
+## $ git rebase
+
 # Undo
 
-## $ git reset
-  Dateien vom Status "Bereit für Commit" entfernen (Aber Änderungen bleiben erhalten, wird nur vom *Index* entfernt)
+## $ git reset --hard
 
 ## $ git checkout
   TODO: Branchwechsel, Änderungen rückgängig machen, vergangenen Commit holen
