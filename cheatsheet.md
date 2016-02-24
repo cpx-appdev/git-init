@@ -70,6 +70,7 @@
   Alle lokalen Commits zum Remote Repository schicken
 
 ## $ git push --tags
+  Alle Tags im aktuellen Branch zum Remote Repository schicken
 
 # Merge & Rebase
 
