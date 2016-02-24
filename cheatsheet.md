@@ -86,5 +86,5 @@
 
 ## $ git reset --hard
 
-## $ git checkout
-  TODO: Branchwechsel, Änderungen rückgängig machen, vergangenen Commit holen
+## $ git checkout .
+  Alle Änderungen an bereits getrackten Dateien rückgängig machen (betrifft keine neu erstellen Dateien)
