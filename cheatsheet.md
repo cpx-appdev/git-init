@@ -78,8 +78,10 @@
 ## $ git merge --ff-only
 ## $ git merge --no-ff
 
-## $ git mergetool
-
+## $ git mergetool [--tool=<tool>]
+  Öffnet das konfigurierte Standard Mergetool, um die Merge Konflikte aufzulösen. 
+  Wird der Parameter für die Toolauswahl nicht gesetzt, nutzt git mergetool die Variable merge.tool aus der git Konfiguration. Falls    diese nicht gesetzt ist, wird ein passendes Default-Programm geöffnet.
+  
 ## $ git rebase
 
 # Undo
