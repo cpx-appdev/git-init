@@ -1,52 +1,47 @@
 # Create
 
 ## $ git init
-  Initializes an empty repository
+  Leeres Git Repository erstellen
 
-## $ git clone *remoteurl*
-  Creates a local clone of a remote repository (in TFS, the URL can be found at "Code > Clone")
+## $ git clone *URL*
+  Ein vorhandenes Git Repository klonen (URL ist im TFS unter "Code > Clone" zu finden)  
 
 # Local Changes
 
 ## $ git status
-  Shows all local changes in the current repository
+  Alle lokalen Änderungen im aktuellen Repository anzeigen (Wie *Pending Changes* im TFVC)
 
 ## $ git diff
-  Shows all local changes for already tracked files in your repositoy in detail
+  Anzeigen aller Änderungen bei bereits getrackten Dateien (Dateiinhalt)
 
 ## $ difftool --dir-diff
-  Start configured diff tool and showing all changes in tree view like mode
- 
-## $ git add *file path*
-  Add changes (incl. deleting and adding) on the specified file
-  
-## $ git add .
-  Add all changes (incl. deleted and added files) to staging
-  
-## $ git commit
-  Commit the currently staged changes
-  1. It opens the (in the .gitconfig defined) editor to enter the commit message
-  2. To execute the commit close the editor after entering the commit message
-  
-## $ git commit -a
-  Stages all changes in tracked files (**NOT NEW FILES**) and executes the *commit* command
+  Wie git diff, aber mit grafischen Tool
 
-## $ git commit -m *msg*
-  Commits the currently staged files with the given commit message in *msg*
-  
+## $ git add *Pfad/zu/Datei*
+  Datei zum Committen markieren
+
+## $ git add .
+  Alle Dateien ab dem aktuellen Verzeichnis (inkl. aller Unterordner) zum Committen markieren
+
+## $ git commit [-m *Kommentar*]
+  Alle zum Committen markierte Dateien Committen
+  **Ohne** den Parameter **-m** geht der konfigurierte Editor auf, der den Kommentar entgegennimmt und nach dem Schließen des Editors wird committed.
+  **Mit** dem Parameter **-m** gibt man den Kommentar direkt auf der Kommandozeile an (bei vorhandenen Leerzeichen mit Anführungsstrichen umschließen)
+
 ## $ git commit -amend
-  Reverts the last commit to enable changes to it
-  * ***DO NOT AMEND PUBLISHED COMMITS***
-  
+  Den letzten Commit zurücksetzen und deren Änderungen wieder als lokale Änderungen einspielen, um so Dateien oder den Commit-Kommentar ändern zu können
+  * ***NIEMALS BEREITS VERÖFFENTLICHTE COMMITS AMENDEN***
+
 # Commit History
 
 ## $ git log
-  
-## $ git log *file*
-  Shows a (simplified) version history for a specific file
+  History des gesamten Repository anzeigen
 
-## $ git blame *file*
-  Shows the detailed changes made to a file (who changed what and when, for each line the last change)
+## $ git log *Pfad/zu/Datei*
+  History der Datei anzeigen
+
+## $ git blame *Pfad/zu/Datei*
+  Alle Änderungen in einer Datei anzeigen, dabei wird pro Zeile angezeigt, welche Änderung von wem committed wurde (wie *Annotate* im TFVC)
 
 # Branches & Tags
 
@@ -59,17 +54,15 @@
 # Update & Publish
 
 ## $ git fetch
-  Retrieves a changes of a remote repository (if multiple remote repositories are assigned to a local one, the specific repo has to be named)
+  Alle Änderungen des Remote Repository in das lokale Repository laden, dabei wird aber das Arbeitsverzeichnis nicht geändert
 
+/*
 ## $ git pull
   Retrieves all changes of a remote repository (see git pull) and integrates changes of a connected remote branch into the local one (changes on both sides causes a merge)
+*/
 
 ## $ git push
-  Sends local changes to the configured remote repositories
-  
-  Which contents are pushed depends on the configuration setting "push.default"
-  
-  In the branches pushed to the remote, there must not exist any pending remote changes
+  Alle lokalen Commits zum Remote Repository schicken
 
 # Merge & Rebase
 
@@ -82,7 +75,7 @@
 # Undo
 
 ## $ git reset
-  Reset changes from index
-  
+  Dateien vom Status "Bereit für Commit" entfernen (Aber Änderungen bleiben erhalten, wird nur vom *Index* entfernt)
+
 ## $ git checkout
-  Revert changes back to commited state
+  TODO: Branchwechsel, Änderungen rückgängig machen, vergangenen Commit holen
