@@ -9,3 +9,5 @@
 - Workflow definieren (Wann rebasen, wann mergen, etc.)
 - Präsentation der FO-Ergebnisse vorbereiten
 - Kommunikation bzgl. Workshops an TL & Co.
+- Weiterführende Links mit aufnehmen? z.B. https://www.ralfebert.de/git/
+
