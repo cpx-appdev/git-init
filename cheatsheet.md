@@ -48,11 +48,15 @@
 
 # Branches & Tags
 
-## $ git branch
+## $ git branch *Branchname*
+  Branch mit dem Namen *Branchname* anlegen
 
-## $ git checkout
+## $ git checkout *Branchname*
+  Zum Branch *Branchname* wechseln
 
-## $ git tag [-a]
+## $ git tag [-a] *Name*
+  Tag mit Namen und Beschreibung (Editor) im aktuellem Branch anlegen
+
 
 # Update & Publish
 
