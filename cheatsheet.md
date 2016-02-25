@@ -98,3 +98,13 @@
 
 ## $ git checkout .
   Alle Änderungen an den Dateien rückgängig machen, die **nicht gestaged** sind (betrifft keine neu erstellten Dateien)
+  
+ # Workflows
+ 
+##  Änderungen vom zentralen Repo integrieren
+ 
+**KEIN PULL VERWENDEN**
+1. Erst fetchen: *git fetch*
+1. Rebase ausführen: *git rebase*
+1. Bei Merge-Konflikten: *git mergetool*
+1. Anschließend das Rebasen abschließen: *git rebase --continue*
