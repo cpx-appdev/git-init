@@ -1,4 +1,4 @@
-# Test {.blubb}
+# Test
 
 - HA
   - Install Script schreiben
