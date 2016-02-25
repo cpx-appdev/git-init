@@ -74,19 +74,26 @@
 
 # Merge & Rebase
 
-## $ git merge
+## $ git merge *Branch*
+  Den angegebenen *Branch* in den aktuellen branch mergen, dabei entscheidet Git selbst, ob es rekursiv oder mittels fast-forward geschieht
+
 ## $ git merge --ff-only
+  Wie merge, aber nur fast-forward zulassen. Ist das nicht möglich, bricht der merge ab.
+
 ## $ git merge --no-ff
+  Wie merge, aber immer rekursiv, selbst, wenn ein fast-forward möglich wäre.
 
 ## $ git mergetool [--tool=<tool>]
-  Öffnet das konfigurierte Standard Mergetool, um die Merge Konflikte aufzulösen. 
+  Öffnet das konfigurierte Standard Mergetool, um die Merge Konflikte aufzulösen.
   Wird der Parameter für die Toolauswahl nicht gesetzt, nutzt git mergetool die Variable merge.tool aus der git Konfiguration. Falls    diese nicht gesetzt ist, wird ein passendes Default-Programm geöffnet.
-  
+
 ## $ git rebase
+
+
 
 # Undo
 
 ## $ git reset --hard
-
-## $ git checkout .
   Alle Änderungen an bereits getrackten Dateien rückgängig machen (betrifft keine neu erstellen Dateien)
+## $ git checkout .
+  
