@@ -22,3 +22,11 @@ git config --global alias.mt "mergetool"
 git config --global alias.rb "rebase"  
 git config --global alias.rbc "git rebase --continue"  
 git config --global alias.undo "!f() { git reset --hard \$1 && git clean -df \$1; }; f"
+
+
+
+git config --global credential.helper store
+git config --global push.default simple
+git config --global fetch.prune true
+git config --global diff.tool meld
+git config --global merge.tool kdiff3
