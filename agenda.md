@@ -1,9 +1,7 @@
+# Test {.blubb}
+
 - HA
-  - Cheatsheet Inhalt komplettieren
-  - Aliasse befüllen
-- Diskussion: Bash Aliasse?
-- git pull mit ins Cheatsheet?
-  - lieber immer fetch und dann merge ff oder r
+  - Install Script schreiben
 - Cheatsheet Format erstellen
     - Vorschlag: HTML Seite (bspw. Bootstrap v4 mit Flexbox oder nativ FlexBox, o.ä.)
 - Workflow definieren (Wann rebasen, wann mergen, etc.)
