@@ -1,6 +1,6 @@
 # Erstellen
 
-## $ git init
+## `$ git init`
   Leeres Git Repository erstellen
 
 ## $ git clone *URL*
@@ -98,11 +98,11 @@
 
 ## $ git checkout .
   Alle Änderungen an den Dateien rückgängig machen, die **nicht gestaged** sind (betrifft keine neu erstellten Dateien)
-  
+
 # Workflows
- 
+
 ##  Änderungen vom zentralen Repo integrieren
- 
+
 **KEIN PULL VERWENDEN**  
 1. Erst fetchen: *git fetch*  
 2. Rebase ausführen: *git rebase*  
@@ -113,4 +113,3 @@
 
 - https://www.ralfebert.de/git/
 - http://tklepzig.github.io/git-branching-pres/
-
