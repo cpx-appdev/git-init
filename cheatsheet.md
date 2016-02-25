@@ -99,7 +99,7 @@
 ## $ git checkout .
   Alle Änderungen an den Dateien rückgängig machen, die **nicht gestaged** sind (betrifft keine neu erstellten Dateien)
   
- # Workflows
+# Workflows
  
 ##  Änderungen vom zentralen Repo integrieren
  
