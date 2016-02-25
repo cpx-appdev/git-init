@@ -103,8 +103,14 @@
  
 ##  Änderungen vom zentralen Repo integrieren
  
-**KEIN PULL VERWENDEN**
-1. Erst fetchen: *git fetch*
-1. Rebase ausführen: *git rebase*
-1. Bei Merge-Konflikten: *git mergetool*
-1. Anschließend das Rebasen abschließen: *git rebase --continue*
+**KEIN PULL VERWENDEN**  
+1. Erst fetchen: *git fetch*  
+2. Rebase ausführen: *git rebase*  
+3. Bei Merge-Konflikten: *git mergetool*  
+4. Anschließend das Rebasen abschließen: *git rebase --continue*  
+
+# Weiterführende Links
+
+- https://www.ralfebert.de/git/
+- http://tklepzig.github.io/git-branching-pres/
+
