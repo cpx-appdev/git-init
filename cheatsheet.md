@@ -63,8 +63,9 @@
 ## $ git fetch
   Alle Änderungen des Remote Repository in das lokale Repository laden, dabei wird aber das Arbeitsverzeichnis nicht geändert
 
-> ## $ git pull
-   Retrieves all changes of a remote repository (see git pull) and integrates changes of a connected remote branch into the local one     (changes on both sides causes a merge)
+## $ git pull
+  Alle Änderungen des Remote Repository in das lokale Repository laden und gleichzeitig die Arbeitskopie aktualisieren (Erzeugt ggf. eine Merge-Commit)
+* ***MÖGLICHST NICHT VERWENDEN. BITTE DEN BEVORZUGTEN WORKFLOW VERWENDEN***
 
 ## $ git push
   Alle lokalen Commits zum Remote Repository schicken
