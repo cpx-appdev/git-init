@@ -18,10 +18,10 @@
   Wie git diff, aber mit grafischen Tool
 
 ## $ git add *Pfad/zu/Datei*
-  Datei zum Committen markieren
+  Datei zum Committen markieren (stagen, in den Index verschieben)
 
 ## $ git add .
-  Alle Dateien ab dem aktuellen Verzeichnis (inkl. aller Unterordner) zum Committen markieren
+  Alle Dateien ab dem aktuellen Verzeichnis (inkl. aller Unterordner) zum Committen markieren (stagen, in den Index verschieben)
 
 ## $ git reset
   Dateien vom Status "Bereit für Commit" entfernen (Aber Änderungen bleiben erhalten, wird nur vom *Index* entfernt)
@@ -88,12 +88,12 @@
   Wird der Parameter für die Toolauswahl nicht gesetzt, nutzt git mergetool die Variable merge.tool aus der git Konfiguration. Falls    diese nicht gesetzt ist, wird ein passendes Default-Programm geöffnet.
 
 ## $ git rebase
-
-
+  Commit History neu schreiben, v.a. hilfreich, wenn beim fetch & merge eines Remote Branches kein Fast Forward möglich ist
 
 # Undo
 
 ## $ git reset --hard
-  Alle Änderungen an bereits getrackten Dateien rückgängig machen (betrifft keine neu erstellen Dateien)
+  Alle Änderungen an bereits getrackten Dateien rückgängig machen (betrifft keine neu erstellten Dateien)
+
 ## $ git checkout .
-  
+  Alle Änderungen an den Dateien rückgängig machen, die **nicht gestaged** sind (betrifft keine neu erstellten Dateien)
