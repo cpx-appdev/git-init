@@ -1,29 +1,21 @@
 #!/bin/bash
 
-diff_tool="meld"
-merge_tool="kdiff3"
-bash_aliases=false
-
 proMode=false
-set_username=true
 
 if [[ $1 == "-p" ]] || [[ $1 == "--pro" ]]
 then
     proMode=true
 fi
 
-setConfigValue()
+setConfig()
 {
-    local questionSet=$1
-    local questionValue=$2
-    local config=$3
-
-    # scope="--global"
-    scope=""
+    local question=$1
+    local config=$2
+    local callback=$3
 
     if $proMode
     then
-        if [[ -z `git config $scope $config` ]]
+        if [[ -z `git config --global $config` ]]
         then
             default="[ja]"
             setValue=true
@@ -33,7 +25,7 @@ setConfigValue()
         fi
 
         echo ""
-        echo "$questionSet $default"
+        echo "$question $default"
         echo "ja"
         echo "nein"
         read choice
@@ -48,100 +40,96 @@ setConfigValue()
 
     if $setValue
     then
-        echo $questionValue
-        read value
-        git config $scope $config "$value"
+        $callback
     fi
 }
 
-# if [ $proMode ]
-# then
-#
-#     if [ -z `git config --global user.name` ]
-#     then
-#         default="[yes]"
-#         set_username=true
-#     else
-#         default="[no]"
-#         set_username=false
-#     fi
-#
-#     echo "Do you wish to set the username? $default"
-#     echo "yes"
-#     echo "no"
-#     read choice
-#
-#     case $choice in
-#         yes) set_username=true
-#         ;;
-#         no) set_username=false
-#         ;;
-#     esac
-# fi
-#
-# if $set_username
-# then
-#     echo "Benutzername eingeben (Format: Vorname Nachname)"
-#     read username
-#     git config --global user.name $username
-# fi
 
-setConfigValue "Benutzernamen setzen?" "Benutzername eingeben (Format: Vorname Nachname)" user.name
-setConfigValue "E-Mail Adresse setzen?" "E-Mail Adresse eingeben" user.email
-
-exit
+setUsername()
+{
+    local username
+    echo "Benutzername eingeben (Format: Vorname Nachname)"
+    read username
+    # git config --global user.name "$username"
+}
+setConfig "Benutzernamen setzen?" user.name setUsername
 
 
-#Diff Tool
-echo "Welches Diff Tool soll konfiguriert werden? [Standard: Meld]"
-echo "1: Meld"
-echo "2: KDiff3"
-echo "3: Visual Studio"
-read choice
 
-case $choice in
-    1) diff_tool="meld"
-    ;;
-    2) diff_tool="kdiff3"
-    ;;
-    3) diff_tool="visualStudio"
-    ;;
-esac
+setEmail()
+{
+    local email
+    echo "E-Mail Adresse eingeben"
+    read email
+    # git config --global user.email "$email"
+}
+setConfig "E-Mail Adresse setzen?" user.email setEmail
 
 
-#Merge Tool
-echo "Welches Merge Tool soll konfiguriert werden? [Standard: KDiff3]"
-echo "1: Meld"
-echo "2: KDiff3"
-echo "3: Visual Studio"
-read choice
 
-case $choice in
-    1) merge_tool="meld"
-    ;;
-    2) merge_tool="kdiff3"
-    ;;
-    3) merge_tool="visualStudio"
-    ;;
-esac
+setDiffTool()
+{
+    local diffTool="meld"
+
+    echo "Welches Diff Tool soll konfiguriert werden? [Standard: Meld]"
+    echo "1: Meld"
+    echo "2: KDiff3"
+    echo "3: Visual Studio"
+    read choice
+
+    case $choice in
+        1) diffTool="meld"
+        ;;
+        2) diffTool="kdiff3"
+        ;;
+        3) diffTool="visualStudio"
+        ;;
+    esac
+
+    # git config --global diff.tool "$diffTool"
+}
+setConfig "Setze Diff Tool?" diff.tool setDiffTool
 
 
-#Bash Aliases
+
+setMergeTool()
+{
+    local mergeTool="kdiff3"
+
+    echo "Welches Merge Tool soll konfiguriert werden? [Standard: KDiff3]"
+    echo "1: Meld"
+    echo "2: KDiff3"
+    echo "3: Visual Studio"
+    read choice
+
+    case $choice in
+        1) mergeTool="meld"
+        ;;
+        2) mergeTool="kdiff3"
+        ;;
+        3) mergeTool="visualStudio"
+        ;;
+    esac
+
+    # git config --global merge.tool "$mergeTool"
+}
+setConfig "Setze Merge Tool?" merge.tool setMergeTool
+
+
+
 echo "Möchtest du Bash Aliase einrichten? [Standard: Nein]"
 echo "1: Ja"
 echo "2: Nein"
 read choice
 
 case $choice in
-    1) bash_aliases=true
+    1) bashAliases=true
     ;;
-    2) bash_aliases=false
+    2) bashAliases=false
     ;;
 esac
 
+#set bash aliases or not
 
-echo "Benutzername: $username"
-echo "E-Mail: $email"
-echo "Diff Tool: $diff_tool"
-echo "Merge Tool: $merge_tool"
-echo "Bash Aliase? $bash_aliases"
+
+exit
