@@ -116,6 +116,8 @@ setMergeTool()
 setConfig "Setze Merge Tool?" merge.tool setMergeTool
 
 
+#TODO: more git config stuff
+
 
 echo "Möchtest du Bash Aliase einrichten? [Standard: Nein]"
 echo "1: Ja"
@@ -129,7 +131,12 @@ case $choice in
     ;;
 esac
 
-#set bash aliases or not
+if $bashAliases
+then
+    #TODO: set bash aliases
+fi
 
+
+#TODO: set git aliases
 
 exit
