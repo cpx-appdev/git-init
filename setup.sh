@@ -10,12 +10,12 @@ fi
 setConfig()
 {
     local question=$1
-    local config=$2
-    local callback=$3
+    local callback=$2
+    local config=$3
 
     if $proMode
     then
-        if [[ -z `git config --global $config` ]]
+        if [[ -z $config || -z `git config --global $config` ]]
         then
             default="[ja]"
             setValue=true
@@ -36,6 +36,8 @@ setConfig()
             n | nein) setValue=false
             ;;
         esac
+    else
+        setValue=true
     fi
 
     if $setValue
@@ -52,7 +54,7 @@ setUsername()
     read username
     # git config --global user.name "$username"
 }
-setConfig "Benutzernamen setzen?" user.name setUsername
+setConfig "Benutzernamen setzen?" setUsername user.name
 
 
 
@@ -63,7 +65,7 @@ setEmail()
     read email
     # git config --global user.email "$email"
 }
-setConfig "E-Mail Adresse setzen?" user.email setEmail
+setConfig "E-Mail Adresse setzen?" setEmail user.email
 
 
 
@@ -86,9 +88,9 @@ setDiffTool()
         ;;
     esac
 
-    # git config --global diff.tool "$diffTool"
+    #TODO: configure diff tool
 }
-setConfig "Setze Diff Tool?" diff.tool setDiffTool
+setConfig "Setze Diff Tool?" setDiffTool diff.tool
 
 
 
@@ -111,32 +113,40 @@ setMergeTool()
         ;;
     esac
 
-    # git config --global merge.tool "$mergeTool"
+    #TODO: configure merge tool
 }
-setConfig "Setze Merge Tool?" merge.tool setMergeTool
+setConfig "Setze Merge Tool?" setMergeTool merge.tool
 
 
-#TODO: more git config stuff
+
+setGeneralGitConfig()
+{
+    echo "Setze allgemeine Git Konfiguration"
+    git config --global credential.helper store
+    git config --global push.default simple
+    git config --global fetch.prune true
+}
+setConfig "Allgemeine Git Konfiguration setzen?" setGeneralGitConfig
 
 
-echo "Möchtest du Bash Aliase einrichten? [Standard: Nein]"
-echo "1: Ja"
-echo "2: Nein"
-read choice
+setBashAliase()
+{
+    if ! grep -q "~/.cpx_aliases" ~/.bashrc
+    then
+        echo "if [ -f ~/.cpx_aliases ]; then . ~/.cpx_aliases; fi" >> ~/.bashrc;
+    fi
 
-case $choice in
-    1) bashAliases=true
-    ;;
-    2) bashAliases=false
-    ;;
-esac
-
-if $bashAliases
-then
-    #TODO: set bash aliases
-fi
+    echo "Setze Bash Aliase"
+    #TODO: write bash aliases to ~/.cpx_aliases
+}
+setConfig "Bash Aliase setzen?" setGitAliase
 
 
-#TODO: set git aliases
+setGitAliase()
+{
+    echo "Setze Git Aliase"
+    #set git aliase
+}
+setConfig "Git Aliase setzen?" setGitAliase
 
 exit
