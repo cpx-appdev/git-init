@@ -1,5 +1,3 @@
-# Test
-
 - HA
   - Install Script schreiben
     - Aliasse, Bash-, Git Config (Mergetools, etc.)
