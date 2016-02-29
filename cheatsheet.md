@@ -1,14 +1,14 @@
-# Erstellen
+# ERSTELLEN
   Neues lokales Git Repository erstellen
 ## `$ git init`
-  
-## `$ git clone *URL*`
-  Ein vorhandenes Git Repository klonen (URL ist im TFS unter "Code > Clone" zu finden)  
 
-# Lokale Änderungen
+  Ein vorhandenes Git Repository klonen (URL ist im TFS unter "Code > Clone" zu finden)  
+## `$ git clone *URL*`
+  
+# LOKALE ÄNDERUNGEN
 
 ## `$ git status`
-  Alle lokalen Änderungen im aktuellen Repository anzeigen (Wie *Pending Changes* im TFVC)
+  Alle lokalen Änderungen im aktuellen Repository anzeigen (wie *Pending Changes* im TFVC)
 
 ## `$ git diff`
   Anzeigen aller Änderungen bei bereits getrackten Dateien (Dateiinhalt)
@@ -34,7 +34,7 @@
   Den letzten Commit zurücksetzen und deren Änderungen wieder als lokale Änderungen einspielen, um so Dateien oder den Commit-Kommentar ändern zu können
   * ***NIEMALS BEREITS VERÖFFENTLICHTE COMMITS AMENDEN***
 
-# History anzeigen
+# HISTORY ANZEIGEN
 
 ## `$ git log`
   History des gesamten Repository anzeigen
@@ -45,7 +45,7 @@
 ## `$ git blame *Pfad/zu/Datei*`
   Alle Änderungen in einer Datei anzeigen, dabei wird pro Zeile angezeigt, welche Änderung von wem committed wurde (wie *Annotate* im TFVC)
 
-# Branches & Tags
+# BRANCHES & TAGS
 
 ## `$ git branch *Branchname*`
   Branch mit dem Namen *Branchname* anlegen
@@ -57,7 +57,7 @@
   Tag mit Namen und Beschreibung (Editor) im aktuellem Branch anlegen
 
 
-# Update & Publish
+# UPDATE & PUBLISH
 
 ## `$ git fetch`
   Alle Änderungen des Remote Repository in das lokale Repository laden, dabei wird aber das Arbeitsverzeichnis nicht geändert
@@ -72,7 +72,7 @@
 ## `$ git push --tags`
   Alle Tags im aktuellen Branch zum Remote Repository schicken
 
-# Merge & Rebase
+# MERGE & REBASE
 
 ## `$ git merge *Branch*`
   Den angegebenen *Branch* in den aktuellen branch mergen, dabei entscheidet Git selbst, ob es rekursiv oder mittels fast-forward geschieht
@@ -90,7 +90,7 @@
 ## `$ git rebase`
   Commit History neu schreiben, v.a. hilfreich, wenn beim fetch & merge eines Remote Branches kein Fast Forward möglich ist
 
-# Undo
+# UNDO
 
 ## `$ git reset --hard`
   Alle Änderungen an bereits getrackten Dateien rückgängig machen (betrifft keine neu erstellten Dateien)
@@ -98,7 +98,7 @@
 ## `$ git checkout .`
   Alle Änderungen an den Dateien rückgängig machen, die **nicht gestaged** sind (betrifft keine neu erstellten Dateien)
 
-# Workflows
+# WORKFLOWS
 
 ##  Änderungen vom zentralen Repo integrieren
 
@@ -108,7 +108,7 @@
 3. Bei Merge-Konflikten: *git mergetool*  
 4. Anschließend das Rebasen abschließen: *git rebase --continue*  
 
-# Weiterführende Links
+# WEITERFÜHRENDE LINKS
 
 - https://www.ralfebert.de/git/
 - http://tklepzig.github.io/git-branching-pres/
