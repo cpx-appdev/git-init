@@ -1,8 +1,7 @@
 # Erstellen
-
+  Neues lokales Git Repository erstellen
 ## `$ git init`
-  Leeres Git Repository erstellen
-
+  
 ## $ git clone *URL*
   Ein vorhandenes Git Repository klonen (URL ist im TFS unter "Code > Clone" zu finden)  
 
