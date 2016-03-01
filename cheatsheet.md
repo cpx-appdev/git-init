@@ -4,11 +4,13 @@
 ## `$ git Kommando`
   Nähere Details (optional)
 
-  Neues lokales Git Repository erstellen
+## Repo erstellen 
 ## `$ git init`
-
-  Ein vorhandenes Git Repository klonen (URL ist im TFS unter "Code > Clone" zu finden)  
+  Neues lokales Git Repository erstellen
+  
+## Repo klonen  
 ## `$ git clone *URL*`
+  Ein vorhandenes Git Repository klonen (URL ist im TFS unter "Code > Clone" zu finden)  
   
 # LOKALE ÄNDERUNGEN
 
