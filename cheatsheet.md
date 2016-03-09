@@ -3,16 +3,16 @@
 #### Neues Repository erstellen
 `$ git init`
 
-Erstellt ein neues lokales Git Repository im aktuellen Ordern.
+Erstellt ein neues lokales Git Repository im aktuellen Ordner.
 
 #### Vorhandenes Repository klonen
 `$ git clone *URL*`
 
-Klont den Inhalt eines Remote Repositories in das aktuelle Verzeichniss.
+Klont den Inhalt eines Remote Repositories in das aktuelle Verzeichnis.
 
 # LOKALE ÄNDERUNGEN
 
-#### Aktueller Status anzeigen
+#### Aktuellen Status anzeigen
 `$ git status`
 Zeigt alle lokalen Änderungen im aktuellen Repository an (entspricht *Pending Changes* im TFVC)
 
@@ -32,7 +32,7 @@ Alle Dateien ab dem aktuellen Verzeichnis (inkl. aller Unterordner) zum Committe
 
 #### Dateien aus dem nächsten Commit nehmen (Unstaging)
 `$ git reset`
-Dateien vom Status "Bereit für Commit" entfernen (Aber Änderungen bleiben erhalten, wird nur vom *Index* entfernt)
+Dateien vom Status "Bereit für Commit" entfernen (Änderungen bleiben dabei erhalten)
 
 #### Committen
 
