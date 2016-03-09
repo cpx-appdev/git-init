@@ -1,3 +1,5 @@
+# ERSTELLEN
+
 #### Neues Repository erstellen 
 `$ git init`
 
@@ -7,6 +9,8 @@ Erstellt ein neues lokales Git Repository im aktuellen Ordern.
 `$ git clone *URL*`
 
 Klont den Inhalt eines Remote Repositories in das aktuelle Verzeichniss.
+  
+# LOKALE ÄNDERUNGEN
   
 #### Aktueller Status anzeigen
 `$ git status`: Zeigt alle lokalen Änderungen im aktuellen Repository an (entspricht *Pending Changes* im TFVC)
@@ -35,7 +39,7 @@ Zusätzliche Optionen:
 
 `--amend`:  Aktuelle Änderungen in den letzten Commit mit integrieren ***NIEMALS BEREITS VERÖFFENTLICHTE COMMITS AMENDEN***
 
-#### HISTORY ANZEIGEN
+# HISTORY ANZEIGEN
 
 `$ git log`: History des gesamten Repository anzeigen
 
@@ -43,6 +47,8 @@ Zusätzliche Optionen:
 
 #### History einer Datei anzeigen
 `$ git blame *Pfad/zu/Datei*`: Alle Änderungen in einer Datei anzeigen, dabei wird pro Zeile angezeigt, welche Änderung von wem committed wurde (wie *Annotate* im TFVC)
+
+# BRANCHES & TAGS
 
 #### Branch erstellen
 `$ git branch *Branchname*`: Branch mit dem Namen *Branchname* anlegen
@@ -52,6 +58,8 @@ Zusätzliche Optionen:
 
 #### Tag erstellen
 `$ git tag -a *Name*`: Tag mit Namen und Beschreibung am aktuellen Commit anlegen
+
+# UPDATE & PUBLISH
 
 #### Änderungen von einem Remote Repository holen
 `$ git fetch`: Alle Änderungen des Remote Repository in das lokale Repository laden, dabei wird aber das Arbeitsverzeichnis nicht geändert
@@ -65,6 +73,8 @@ Zusätzliche Optionen:
 
 #### Tags an ein Remote Repository übertragen
 `$ git push --tags`
+
+# MERGE & REBASE
 
 #### Mergen
 `$ git merge *Branch*`: Den angegebenen *Branch* in den aktuellen branch mergen, dabei entscheidet Git selbst, ob es rekursiv oder mittels fast-forward geschieht
@@ -80,6 +90,8 @@ Zusätzliche Optionen:
 #### Rebase
 `$ git rebase`
 Commit History neu schreiben, v.a. hilfreich, wenn beim fetch & merge eines Remote Branches kein Fast Forward möglich ist
+
+# UNDO
 
 #### Änderungen rückgängig machen
 `$ git reset --hard`
