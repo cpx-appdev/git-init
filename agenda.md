@@ -3,6 +3,7 @@
   - FRAGE: Was ist wirklich Standard? (aktuell sollen git UND bash-Aliasse gesetzt werden)
     - Aliasse, Bash-, Git Config (Mergetools, etc.)
   - Umstellung Cheatsheet: Kurztitel oben, dann Code, dann ggf. Beschreibung
+- Cheatsheet für Druck kürzen
 - Diskussion
   - clean im Cheatsheet?
   - reset --hard **und** checkout im Cheatsheet?
