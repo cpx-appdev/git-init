@@ -6,7 +6,5 @@
 - Diskussion
   - clean im Cheatsheet?
   - reset --hard **und** checkout im Cheatsheet?
-- Cheatsheet Format erstellen
-    - Vorschlag: HTML Seite (bspw. Bootstrap v4 mit Flexbox oder nativ FlexBox, o.ä.)
 - Präsentation der FO-Ergebnisse vorbereiten
 - Kommunikation bzgl. Workshops an TL & Co.
