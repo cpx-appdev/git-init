@@ -115,11 +115,11 @@ setKDiff3MergeTool()
 
 setVisualStudioMergeTool()
 {
-    git config --global diff.tool "vsdiffmerge"
-    git config --global difftool.prompt true
-    git config --global difftool.vsdiffmerge.cmd "\"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m"
-    git config --global difftool.vsdiffmerge.keepbackup false
-    git config --global difftool.vsdiffmerge.trustexistcode true    
+    git config --global merge.tool "vsdiffmerge"
+    git config --global mergetool.prompt true
+    git config --global mergetool.vsdiffmerge.cmd "\"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m"
+    git config --global mergetool.vsdiffmerge.keepbackup false
+    git config --global mergetool.vsdiffmerge.trustexistcode true    
 }
 
 setMergeTool()
