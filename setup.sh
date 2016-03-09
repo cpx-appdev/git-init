@@ -232,7 +232,7 @@ setConfig "E-Mail Adresse setzen?" setEmail user.email
 setConfig "Setze Diff Tool?" setDiffTool diff.tool
 setConfig "Setze Merge Tool?" setMergeTool merge.tool
 setConfig "Allgemeine Git Konfiguration setzen?" setGeneralGitConfig
-setConfig "Bash Aliase setzen?" setGitAliase
+setConfig "Bash Aliase setzen?" setBashAliase
 setConfig "Git Aliase setzen?" setGitAliase
 
 exit
