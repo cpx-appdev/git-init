@@ -3,6 +3,9 @@
   - FRAGE: Was ist wirklich Standard? (aktuell sollen git UND bash-Aliasse gesetzt werden)
     - Aliasse, Bash-, Git Config (Mergetools, etc.)
   - Umstellung Cheatsheet: Kurztitel oben, dann Code, dann ggf. Beschreibung
+- Diskussion
+  - clean im Cheatsheet?
+  - reset --hard **und** checkout im Cheatsheet?
 - Cheatsheet Format erstellen
     - Vorschlag: HTML Seite (bspw. Bootstrap v4 mit Flexbox oder nativ FlexBox, o.ä.)
 - Präsentation der FO-Ergebnisse vorbereiten
