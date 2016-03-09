@@ -98,9 +98,9 @@ Den angegebenen *Branch* in den aktuellen branch mergen, dabei entscheidet Git s
 Zusätzliche Optionen:
 
 `--ff-only`
-nur fast-forward zulassen
+Nur fast-forward zulassen
 `--no-ff`
-erzeugt immer einen Mergecommit
+Erzeugt immer einen Mergecommit
 
 #### Mergekonflikte lösen
 `$ git mergetool`
