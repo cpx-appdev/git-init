@@ -1,5 +1,6 @@
 - HA
   - Install Script schreiben
+  - FRAGE: Was ist wirklich Standard? (aktuell sollen git UND bash-Aliasse gesetzt werden)
     - Aliasse, Bash-, Git Config (Mergetools, etc.)
   - Umstellung Cheatsheet: Kurztitel oben, dann Code, dann ggf. Beschreibung
 - Cheatsheet Format erstellen
