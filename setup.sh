@@ -2,10 +2,13 @@
 
 proMode=false
 
-if [[ $1 == "-p" ]] || [[ $1 == "--pro" ]]
-then
-    proMode=true
-fi
+setProMode()
+{
+    if [[ $1 == "-p" ]] || [[ $1 == "--pro" ]]
+    then
+        proMode=true
+    fi
+}
 
 setConfig()
 {
@@ -46,7 +49,6 @@ setConfig()
     fi
 }
 
-
 setUsername()
 {
     local username
@@ -54,9 +56,6 @@ setUsername()
     read username
     git config --global user.name "$username"
 }
-setConfig "Benutzernamen setzen?" setUsername user.name
-
-
 
 setEmail()
 {
@@ -65,14 +64,28 @@ setEmail()
     read email
     git config --global user.email "$email"
 }
-setConfig "E-Mail Adresse setzen?" setEmail user.email
 
+setMeldDiffTool()
+{
+    git config --global diff.tool meld
+}
 
+setKDiff3DiffTool()
+{
+    git config --global diff.tool kdiff3
+}
+
+setVisualStudioDiffTool()
+{
+    git config --global diff.tool "vsdiffmerge"
+    git config --global difftool.prompt true
+    git config --global difftool.vsdiffmerge.cmd "\"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\vsdiffmerge.exe\" \"$LOCAL\" \"$REMOTE\" //t"
+    git config --global difftool.vsdiffmerge.keepbackup false
+    git config --global difftool.vsdiffmerge.trustexistcode true    
+}
 
 setDiffTool()
 {
-    local diffTool="meld"
-
     echo "Welches Diff Tool soll konfiguriert werden? [Standard: Meld]"
     echo "1: Meld"
     echo "2: KDiff3"
@@ -80,39 +93,37 @@ setDiffTool()
     read choice
 
     case $choice in
-        1) diffTool="meld"
+        1) setMeldDiffTool
         ;;
-        2) diffTool="kdiff3"
+        2) setKDiff3DiffTool
         ;;
-        3) diffTool="visualStudio"
+        3) setVisualStudioDiffTool
         ;;
+        *) setMeldDiffTool
     esac
-
-    if [[ $diffTool == "meld" ]]
-    then
-        git config --global diff.tool meld
-    fi
-    if [[ $diffTool == "kdiff3" ]]
-    then
-        git config --global diff.tool kdiff3
-    fi
-    if [[ $diffTool == "visualStudio" ]]
-    then
-        git config --global diff.tool "vsdiffmerge"
-        git config --global difftool.prompt true
-        git config --global difftool.vsdiffmerge.cmd "\"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\vsdiffmerge.exe\" \"$LOCAL\" \"$REMOTE\" //t"
-        git config --global difftool.vsdiffmerge.keepbackup false
-        git config --global difftool.vsdiffmerge.trustexistcode true
-    fi
 }
-setConfig "Setze Diff Tool?" setDiffTool diff.tool
 
+setMeldMergeTool()
+{
+    git config --global merge.tool meld
+}
 
+setKDiff3MergeTool()
+{
+    git config --global merge.tool kdiff3
+}
+
+setVisualStudioMergeTool()
+{
+    git config --global diff.tool "vsdiffmerge"
+    git config --global difftool.prompt true
+    git config --global difftool.vsdiffmerge.cmd "\"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m"
+    git config --global difftool.vsdiffmerge.keepbackup false
+    git config --global difftool.vsdiffmerge.trustexistcode true    
+}
 
 setMergeTool()
 {
-    local mergeTool="kdiff3"
-
     echo "Welches Merge Tool soll konfiguriert werden? [Standard: KDiff3]"
     echo "1: Meld"
     echo "2: KDiff3"
@@ -120,34 +131,15 @@ setMergeTool()
     read choice
 
     case $choice in
-        1) mergeTool="meld"
+        1) setMeldMergeTool
         ;;
-        2) mergeTool="kdiff3"
+        2) setKDiff3MergeTool
         ;;
-        3) mergeTool="visualStudio"
+        3) setVisualStudioMergeTool
         ;;
+        *) setMeldMergeTool
     esac
-
-    if [[ $diffTool == "meld" ]]
-    then
-        git config --global merge.tool meld
-    fi
-    if [[ $diffTool == "kdiff3" ]]
-    then
-        git config --global merge.tool kdiff3
-    fi
-    if [[ $diffTool == "visualStudio" ]]
-    then
-        git config --global diff.tool "vsdiffmerge"
-        git config --global difftool.prompt true
-        git config --global difftool.vsdiffmerge.cmd "\"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m"
-        git config --global difftool.vsdiffmerge.keepbackup false
-        git config --global difftool.vsdiffmerge.trustexistcode true
-    fi
 }
-setConfig "Setze Merge Tool?" setMergeTool merge.tool
-
-
 
 setGeneralGitConfig()
 {
@@ -156,8 +148,6 @@ setGeneralGitConfig()
     git config --global push.default simple
     git config --global fetch.prune true
 }
-setConfig "Allgemeine Git Konfiguration setzen?" setGeneralGitConfig
-
 
 setBashAliase()
 {
@@ -204,8 +194,6 @@ setBashAliase()
 	echo "__git_complete gpl _git_pull" >> ~/.cpx_aliases
 	echo "__git_complete gm _git_merge" >> ~/.cpx_aliases
 }
-setConfig "Bash Aliase setzen?" setGitAliase
-
 
 setGitAliase()
 {
@@ -236,6 +224,15 @@ setGitAliase()
     git config --global alias.rbc "git rebase --continue"
     git config --global alias.undo "!f() { git reset --hard \$1 && git clean -df \$1; }; f"
 }
+
+setProMode $1
+
+setConfig "Benutzernamen setzen?" setUsername user.name
+setConfig "E-Mail Adresse setzen?" setEmail user.email
+setConfig "Setze Diff Tool?" setDiffTool diff.tool
+setConfig "Setze Merge Tool?" setMergeTool merge.tool
+setConfig "Allgemeine Git Konfiguration setzen?" setGeneralGitConfig
+setConfig "Bash Aliase setzen?" setGitAliase
 setConfig "Git Aliase setzen?" setGitAliase
 
 exit
