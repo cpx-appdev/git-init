@@ -1,113 +1,101 @@
-# ERSTELLEN
+#### Neues Repository erstellen 
+`$ git init`
 
-## Titel
-## `$ git Kommando`
-  Nähere Details (optional)
-
-## Repo erstellen 
-## `$ git init`
-  Neues lokales Git Repository erstellen
+Erstellt ein neues lokales Git Repository im aktuellen Ordern.
   
-## Repo klonen  
-## `$ git clone *URL*`
-  Ein vorhandenes Git Repository klonen (URL ist im TFS unter "Code > Clone" zu finden)  
+#### Vorhandenes Repository klonen
+`$ git clone *URL*`
+
+Klont den Inhalt eines Remote Repositories in das aktuelle Verzeichniss.
   
-# LOKALE ÄNDERUNGEN
+#### Aktueller Status anzeigen
+`$ git status`: Zeigt alle lokalen Änderungen im aktuellen Repository an (entspricht *Pending Changes* im TFVC)
 
-## `$ git status`
-  Alle lokalen Änderungen im aktuellen Repository anzeigen (wie *Pending Changes* im TFVC)
+#### Dateidifferenzen  anzeigen
+`$ git diff`:Zeigt alle Änderungen bei bereits getrackten Dateien an (Dateiinhalt)
 
-## `$ git diff`
-  Anzeigen aller Änderungen bei bereits getrackten Dateien (Dateiinhalt)
+`$ difftool`:   Öffnet ein grafisches Tool um Änderungen anzuzeigen
 
-## `$ difftool --dir-diff`
-  Wie git diff, aber mit grafischen Tool
+#### Dateien für den Commit vorbereiten (Staging)
+`$ git add *Pfad/zu/Datei*`: Datei zum Committen markieren.
 
-## `$ git add *Pfad/zu/Datei*`
-  Datei zum Committen markieren (stagen, in den Index verschieben)
+`$ git add .`  Alle Dateien ab dem aktuellen Verzeichnis (inkl. aller Unterordner) zum Committen markieren.
 
-## `$ git add .`
-  Alle Dateien ab dem aktuellen Verzeichnis (inkl. aller Unterordner) zum Committen markieren (stagen, in den Index verschieben)
-
-## `$ git reset`
+#### Dateien aus dem nächsten Commit nehmen (Unstaging)
+`$ git reset`
   Dateien vom Status "Bereit für Commit" entfernen (Aber Änderungen bleiben erhalten, wird nur vom *Index* entfernt)
 
-## `$ git commit [-m *Kommentar*]`
-  Alle zum Committen markierte Dateien Committen
+#### Committen
+
+`$ git commit [-m *Kommentar*]`: Alle zum Committen markierte Dateien Committen
   **Ohne** den Parameter **-m** geht der konfigurierte Editor auf, der den Kommentar entgegennimmt und nach dem Schließen des Editors wird committed.
   **Mit** dem Parameter **-m** gibt man den Kommentar direkt auf der Kommandozeile an (bei vorhandenen Leerzeichen mit Anführungsstrichen umschließen)
 
-## `$ git commit --amend`
-  Den letzten Commit zurücksetzen und deren Änderungen wieder als lokale Änderungen einspielen, um so Dateien oder den Commit-Kommentar ändern zu können
-  * ***NIEMALS BEREITS VERÖFFENTLICHTE COMMITS AMENDEN***
+Zusätzliche Optionen:
 
-# HISTORY ANZEIGEN
+`--amend`:  Aktuelle Änderungen in den letzten Commit mit integrieren ***NIEMALS BEREITS VERÖFFENTLICHTE COMMITS AMENDEN***
 
-## `$ git log`
-  History des gesamten Repository anzeigen
+#### HISTORY ANZEIGEN
 
-## `$ git log *Pfad/zu/Datei*`
-  History der Datei anzeigen
+`$ git log`: History des gesamten Repository anzeigen
 
-## `$ git blame *Pfad/zu/Datei*`
-  Alle Änderungen in einer Datei anzeigen, dabei wird pro Zeile angezeigt, welche Änderung von wem committed wurde (wie *Annotate* im TFVC)
+`$ git log *Pfad/zu/Datei*`: History der Datei anzeigen
 
-# BRANCHES & TAGS
+#### History einer Datei anzeigen
+`$ git blame *Pfad/zu/Datei*`: Alle Änderungen in einer Datei anzeigen, dabei wird pro Zeile angezeigt, welche Änderung von wem committed wurde (wie *Annotate* im TFVC)
 
-## `$ git branch *Branchname*`
-  Branch mit dem Namen *Branchname* anlegen
+#### Branch erstellen
+`$ git branch *Branchname*`: Branch mit dem Namen *Branchname* anlegen
 
-## `$ git checkout *Branchname*`
-  Zum Branch *Branchname* wechseln
+#### Branch wechseln
+`$ git checkout *Branchname*`: Zum Branch *Branchname* wechseln
 
-## `$ git tag [-a] *Name*`
-  Tag mit Namen und Beschreibung (Editor) im aktuellem Branch anlegen
+#### Tag erstellen
+`$ git tag -a *Name*`: Tag mit Namen und Beschreibung am aktuellen Commit anlegen
 
+#### Änderungen von einem Remote Repository holen
+`$ git fetch`: Alle Änderungen des Remote Repository in das lokale Repository laden, dabei wird aber das Arbeitsverzeichnis nicht geändert
 
-# UPDATE & PUBLISH
-
-## `$ git fetch`
-  Alle Änderungen des Remote Repository in das lokale Repository laden, dabei wird aber das Arbeitsverzeichnis nicht geändert
-
-## `$ git pull`
-  Alle Änderungen des Remote Repository in das lokale Repository laden und gleichzeitig die Arbeitskopie aktualisieren (Erzeugt ggf. eine Merge-Commit)
+#### Änderungen von einem Remote Repository holen und gleichzeitig mergen
+`$ git pull`: Alle Änderungen des Remote Repository in das lokale Repository laden und gleichzeitig die Arbeitskopie aktualisieren (Erzeugt ggf. eine Merge-Commit)
 * ***MÖGLICHST NICHT VERWENDEN. BITTE DEN BEVORZUGTEN WORKFLOW VERWENDEN***
 
-## `$ git push`
-  Alle lokalen Commits zum Remote Repository schicken
+#### Änderungen an ein Remote Repository übertragen 
+`$ git push`
 
-## `$ git push --tags`
-  Alle Tags im aktuellen Branch zum Remote Repository schicken
+#### Tags an ein Remote Repository übertragen
+`$ git push --tags`
 
-# MERGE & REBASE
+#### Mergen
+`$ git merge *Branch*`: Den angegebenen *Branch* in den aktuellen branch mergen, dabei entscheidet Git selbst, ob es rekursiv oder mittels fast-forward geschieht
 
-## `$ git merge *Branch*`
-  Den angegebenen *Branch* in den aktuellen branch mergen, dabei entscheidet Git selbst, ob es rekursiv oder mittels fast-forward geschieht
+Zusätzliche Optionen:
 
-## `$ git merge --ff-only`
-  Wie merge, aber nur fast-forward zulassen. Ist das nicht möglich, bricht der merge ab.
+`--ff-only`: nur fast-forward zulassen
+`--no-ff`: erzeugt immer einen Mergecommit
 
-## `$ git merge --no-ff`
-  Wie merge, aber immer rekursiv, selbst, wenn ein fast-forward möglich wäre.
+#### Mergekonflikte lösen
+`$ git mergetool`: Öffnet das konfigurierte Standard Mergetool, um die Merge Konflikte aufzulösen.
 
-## `$ git mergetool [--tool=<tool>]`
-  Öffnet das konfigurierte Standard Mergetool, um die Merge Konflikte aufzulösen.
-  Wird der Parameter für die Toolauswahl nicht gesetzt, nutzt git mergetool die Variable merge.tool aus der git Konfiguration. Falls    diese nicht gesetzt ist, wird ein passendes Default-Programm geöffnet.
+#### Rebase
+`$ git rebase`
+Commit History neu schreiben, v.a. hilfreich, wenn beim fetch & merge eines Remote Branches kein Fast Forward möglich ist
 
-## `$ git rebase`
-  Commit History neu schreiben, v.a. hilfreich, wenn beim fetch & merge eines Remote Branches kein Fast Forward möglich ist
+#### Änderungen rückgängig machen
+`$ git reset --hard`
+ Alle Änderungen an bereits getrackten Dateien rückgängig machen (betrifft keine neu erstellten Dateien)
 
-# UNDO
+#### Änderungen rückgängig machen (Unterschied?)
+`$ git checkout .`
+Alle Änderungen an den Dateien rückgängig machen, die **nicht gestaged** sind (betrifft keine neu erstellten Dateien)
 
-## `$ git reset --hard`
-  Alle Änderungen an bereits getrackten Dateien rückgängig machen (betrifft keine neu erstellten Dateien)
+#### Repository zurücksetzen
+`$ git clean -xdf`
+Setzt das aktuelle Arbeitsverzeichniss zurück. Alle Änderungen oder nicht eingecheckte Dateien werden entfernt. Hat den selbene Effekt wie das Repository frisch zu klonen.
 
-## `$ git checkout .`
-  Alle Änderungen an den Dateien rückgängig machen, die **nicht gestaged** sind (betrifft keine neu erstellten Dateien)
+### WORKFLOWS
 
-# WORKFLOWS
-
-##  Änderungen vom zentralen Repo integrieren
+####  Änderungen vom zentralen Repo integrieren
 
 **KEIN PULL VERWENDEN**  
 1. Erst fetchen: *git fetch*  
@@ -115,7 +103,7 @@
 3. Bei Merge-Konflikten: *git mergetool*  
 4. Anschließend das Rebasen abschließen: *git rebase --continue*  
 
-# WEITERFÜHRENDE LINKS
+### WEITERFÜHRENDE LINKS
 
 - https://www.ralfebert.de/git/
 - http://tklepzig.github.io/git-branching-pres/
