@@ -7,6 +7,7 @@ setProMode()
     if [[ $1 == "-p" ]] || [[ $1 == "--pro" ]]
     then
         proMode=true
+        echo "Pro Mode aktiviert"
     fi
 }
 
@@ -234,5 +235,7 @@ setConfig "Setze Merge Tool?" setMergeTool merge.tool
 setConfig "Allgemeine Git Konfiguration setzen?" setGeneralGitConfig
 setConfig "Bash Aliase setzen?" setBashAliase
 setConfig "Git Aliase setzen?" setGitAliase
+
+echo "Installation abgeschlossen"
 
 exit
