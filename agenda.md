@@ -9,3 +9,6 @@
   - reset --hard **und** checkout im Cheatsheet?
 - Präsentation der FO-Ergebnisse vorbereiten
 - Kommunikation bzgl. Workshops an TL & Co.
+- Pro & Contra zu Praxiserfahrungen mit Git
+    - z.B. negative Erfahrungen (Probleme) inkl. Lösungen beispielhaft vorstellen
+    
