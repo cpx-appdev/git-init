@@ -212,6 +212,7 @@ setGitAliase()
     git config --global alias.a "add --all"
     git config --global alias.ap "add --patch"
     git config --global alias.cm "commit -m"
+    git config --global alias.cma "commit --amend"
     git config --global alias.acm "!f() { git add --all && git commit -m \"\$1\"; }; f"
     git config --global alias.acmp "!f() { git add --all && git commit -m \"\$1\" && git push; }; f"
     git config --global alias.c "checkout"
