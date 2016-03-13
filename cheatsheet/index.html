@@ -11,18 +11,8 @@
             font-family: arial;
         }
 
-        #header {
-            padding: 5px;
-            display: block;
-            width: 100%;
-            color: white;
-            background: #515964;
-            text-align: left;
-            padding-left: 20px;
-        }
-
         #content {
-            margin: 20px;
+            margin: 10px;
             -webkit-column-count: 3;
             -moz-column-count: 3;
             column-count: 3;
@@ -31,24 +21,38 @@
             column-gap: 30px;
         }
 
-        h1 {
-            margin: 0 0 10px;
+        h1,
+        h2,
+        h3 {
+            margin: 20px 0 10px;
             padding: 2px;
             display: block;
             width: 100%;
             color: white;
             background: #515964;
             font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        h1:first-of-type {
+            margin-top: 0;
         }
 
         h2 {
-            margin: 5px 0 3px 0;
-            font-size: 14px;
+            -webkit-column-break-before: always;
+            page-break-before: always;
+            break-before: always;
+        }
+
+        h3 {
+            background: #3023E8;
+        }
+
+        h4 {
+            margin-bottom: 6px;
         }
 
         code {
-            display: block;
-            width: 100%;
             background: #FFF5CE;
             padding: 2px 4px;
             margin: 0 0 5px 0;
@@ -56,12 +60,21 @@
             color: #707B89;
         }
 
+        pre {
+            margin: 0;
+        }
+
+        pre > code {
+            display: block;
+            width: 100%;
+        }
+
         p {
             margin: 1px 0 10px 0;
             font-size: 14px;
         }
 
-        li em {
+        li > strong {
             font-weight: bold;
             display: block;
             padding: 5px;
@@ -74,17 +87,33 @@
         ul,
         ol {
             margin: 0;
+        }
+
+        ul {
             padding: 0 0 15px;
         }
 
-        li {
+        ul > li {
             list-style-type: none;
+        }
+
+        ol {
+            padding-left: 26px;
+        }
+
+        ol > li {
+            margin: 6px 0;
         }
 
         @media print {
             body {
                 -webkit-print-color-adjust: exact;
             }
+        }
+    </style>
+    <style media="print">
+        #content {
+            margin: 0;
         }
     </style>
 </head>
@@ -100,7 +129,7 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/1.3.0/showdown.min.js"></script>
 <script src="fetch.js"></script>
 <script type="text/javascript">
-    function fetch() {
+    function github() {
         fetch('https://raw.githubusercontent.com/tklepzig/git-init/master/cheatsheet.md').then(function(response) {
             return response.text()
         }).then(function(markdown) {
@@ -129,7 +158,7 @@
     }
 
     document.getElementById('file').addEventListener('change', local, false);
-    document.getElementById('fetch').addEventListener('click', fetch, false);
+    document.getElementById('fetch').addEventListener('click', github, false);
 </script>
 
 </html>
