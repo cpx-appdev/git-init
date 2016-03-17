@@ -174,12 +174,6 @@ Commit History neu schreiben, v.a. hilfreich, wenn beim fetch & merge eines Remo
 
 #### Änderungen rückgängig machen
 ```
-$ git reset --hard
-```
-Alle Änderungen an bereits getrackten Dateien rückgängig machen (betrifft keine neu erstellten Dateien)
-
-#### Änderungen rückgängig machen (Unterschied?)
-```
 $ git checkout .
 ```
 Alle Änderungen an den Dateien rückgängig machen, die **nicht gestaged** sind (betrifft keine neu erstellten Dateien)
