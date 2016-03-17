@@ -1,12 +1,11 @@
 - HA
   - Install Script schreiben
-  - FRAGE: Was ist wirklich Standard? (aktuell sollen git UND bash-Aliasse gesetzt werden)
-    - Aliasse, Bash-, Git Config (Mergetools, etc.)
   - Umstellung Cheatsheet: Kurztitel oben, dann Code, dann ggf. Beschreibung
-- Cheatsheet für Druck kürzen (und ggf. Style anpassen)
 - Diskussion
   - clean im Cheatsheet?
   - reset --hard **und** checkout im Cheatsheet?
+  - Was ist wirklich Standard? (aktuell sollen git UND bash-Aliasse gesetzt werden)
+    - Aliasse, Bash-, Git Config (Mergetools, etc.)
 - Präsentation der FO-Ergebnisse vorbereiten
 - Kommunikation bzgl. Workshops an TL & Co.
 - Pro & Contra zu Praxiserfahrungen mit Git
