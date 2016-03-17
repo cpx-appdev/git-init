@@ -178,12 +178,6 @@ $ git checkout .
 ```
 Alle Änderungen an den Dateien rückgängig machen, die **nicht gestaged** sind (betrifft keine neu erstellten Dateien)
 
-#### Repository zurücksetzen
-```
-$ git clean -xdf
-```
-Setzt das aktuelle Arbeitsverzeichniss zurück. Alle Änderungen oder nicht eingecheckte Dateien werden entfernt. Hat den selbene Effekt wie das Repository frisch zu klonen.
-
 ### Workflows
 
 ####  Änderungen vom zentralen Repository integrieren
