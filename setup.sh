@@ -82,7 +82,7 @@ setVisualStudioDiffTool()
     git config --global difftool.prompt true
     git config --global difftool.vsdiffmerge.cmd "\"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\vsdiffmerge.exe\" \"$LOCAL\" \"$REMOTE\" //t"
     git config --global difftool.vsdiffmerge.keepbackup false
-    git config --global difftool.vsdiffmerge.trustexistcode true    
+    git config --global difftool.vsdiffmerge.trustexistcode true
 }
 
 setDiffTool()
@@ -120,7 +120,7 @@ setVisualStudioMergeTool()
     git config --global mergetool.prompt true
     git config --global mergetool.vsdiffmerge.cmd "\"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m"
     git config --global mergetool.vsdiffmerge.keepbackup false
-    git config --global mergetool.vsdiffmerge.trustexistcode true    
+    git config --global mergetool.vsdiffmerge.trustexistcode true
 }
 
 setMergeTool()
@@ -162,38 +162,38 @@ setBashAliase()
     echo "Setze Bash Aliase"
 
     echo "alias g='git '" >> ~/.cpx_aliases
-	echo "alias got='git '" >> ~/.cpx_aliases
-	echo "alias get='git '" >> ~/.cpx_aliases
-	echo "alias ga='git add'" >> ~/.cpx_aliases
-	echo "alias gs='git status '" >> ~/.cpx_aliases
-	echo "alias gc='git commit '" >> ~/.cpx_aliases
-	echo "alias gcm='git commit -a -m '" >> ~/.cpx_aliases
-	echo "alias gb='git branch '" >> ~/.cpx_aliases
-	echo "alias go='git checkout '" >> ~/.cpx_aliases
-	echo "alias gf='git fetch '" >> ~/.cpx_aliases
-	echo "alias gd='git diff '" >> ~/.cpx_aliases
-	echo "alias gps='git push '" >> ~/.cpx_aliases
-	echo "alias grb='git rebase '" >> ~/.cpx_aliases
-	echo "alias gpl='git pull '" >> ~/.cpx_aliases
-	echo "alias gm='git merge '" >> ~/.cpx_aliases
-	echo "alias gk='gitk --all&'" >> ~/.cpx_aliases
-	echo "alias gx='gitx --all'" >> ~/.cpx_aliases
-	echo "alias gd='git discard '" >> ~/.cpx_aliases
-	echo "alias gda='git discardall'" >> ~/.cpx_aliases
-	echo "alias gwin='git config --global credential.helper wincred'" >> ~/.cpx_aliases
+    echo "alias got='git '" >> ~/.cpx_aliases
+    echo "alias get='git '" >> ~/.cpx_aliases
+    echo "alias ga='git add'" >> ~/.cpx_aliases
+    echo "alias gs='git status '" >> ~/.cpx_aliases
+    echo "alias gc='git commit '" >> ~/.cpx_aliases
+    echo "alias gcm='git commit -a -m '" >> ~/.cpx_aliases
+    echo "alias gb='git branch '" >> ~/.cpx_aliases
+    echo "alias go='git checkout '" >> ~/.cpx_aliases
+    echo "alias gf='git fetch '" >> ~/.cpx_aliases
+    echo "alias gd='git diff '" >> ~/.cpx_aliases
+    echo "alias gps='git push '" >> ~/.cpx_aliases
+    echo "alias grb='git rebase '" >> ~/.cpx_aliases
+    echo "alias gpl='git pull '" >> ~/.cpx_aliases
+    echo "alias gm='git merge '" >> ~/.cpx_aliases
+    echo "alias gk='gitk --all&'" >> ~/.cpx_aliases
+    echo "alias gx='gitx --all'" >> ~/.cpx_aliases
+    echo "alias gd='git discard '" >> ~/.cpx_aliases
+    echo "alias gda='git discardall'" >> ~/.cpx_aliases
+    echo "alias gwin='git config --global credential.helper wincred'" >> ~/.cpx_aliases
 
-	echo "__git_complete g _git" >> ~/.cpx_aliases
-	echo "__git_complete ga _git_add" >> ~/.cpx_aliases
-	echo "__git_complete gs _git_status" >> ~/.cpx_aliases
-	echo "__git_complete gc _git_commit" >> ~/.cpx_aliases
-	echo "__git_complete gcm _git_commit" >> ~/.cpx_aliases
-	echo "__git_complete gb _git_branch" >> ~/.cpx_aliases
-	echo "__git_complete go _git_checkout" >> ~/.cpx_aliases
-	echo "__git_complete gf _git_fetch" >> ~/.cpx_aliases
-	echo "__git_complete gd _git_diff" >> ~/.cpx_aliases
-	echo "__git_complete gps _git_push" >> ~/.cpx_aliases
-	echo "__git_complete gpl _git_pull" >> ~/.cpx_aliases
-	echo "__git_complete gm _git_merge" >> ~/.cpx_aliases
+    echo "__git_complete g _git" >> ~/.cpx_aliases
+    echo "__git_complete ga _git_add" >> ~/.cpx_aliases
+    echo "__git_complete gs _git_status" >> ~/.cpx_aliases
+    echo "__git_complete gc _git_commit" >> ~/.cpx_aliases
+    echo "__git_complete gcm _git_commit" >> ~/.cpx_aliases
+    echo "__git_complete gb _git_branch" >> ~/.cpx_aliases
+    echo "__git_complete go _git_checkout" >> ~/.cpx_aliases
+    echo "__git_complete gf _git_fetch" >> ~/.cpx_aliases
+    echo "__git_complete gd _git_diff" >> ~/.cpx_aliases
+    echo "__git_complete gps _git_push" >> ~/.cpx_aliases
+    echo "__git_complete gpl _git_pull" >> ~/.cpx_aliases
+    echo "__git_complete gm _git_merge" >> ~/.cpx_aliases
 }
 
 setGitAliase()
