@@ -175,8 +175,6 @@ setBashAliase()
     echo "alias gap='git add --patch '" >> ~/.cpx_aliases
     echo "alias gcm='git commit -m '" >> ~/.cpx_aliases
     echo "alias gcma='git commit --amend '" >> ~/.cpx_aliases
-    echo "alias gacm='git !f() { git add --all && git commit -m \"\$1\"; }; f '" >> ~/.cpx_aliases
-    echo "alias gacmp='git !f() { git add --all && git commit -m \"\$1\" && git push; }; f '" >> ~/.cpx_aliases
     echo "alias gc='git checkout '" >> ~/.cpx_aliases
     echo "alias gb='git branch '" >> ~/.cpx_aliases
     echo "alias gf='git fetch '" >> ~/.cpx_aliases
@@ -186,7 +184,9 @@ setBashAliase()
     echo "alias gt='git mergetool '" >> ~/.cpx_aliases
     echo "alias grb='git rebase '" >> ~/.cpx_aliases
     echo "alias grbc='git rebase --continue '" >> ~/.cpx_aliases
-    echo "alias gundo='git !f() { git reset --hard \$1 && git clean -df \$1; }; f '" >> ~/.cpx_aliases
+    echo "gacm() { git add --all; git commit -m \"\$1\"; }" >> ~/.cpx_aliases
+    echo "gacmp() { git add --all; git commit -m \"\$1\"; git push; }" >> ~/.cpx_aliases
+    echo "gundo() { git reset --hard \$1; git clean -df \$1; }" >> ~/.cpx_aliases
 
     echo "__git_complete g _git" >> ~/.cpx_aliases
     echo "__git_complete ga _git_add" >> ~/.cpx_aliases
