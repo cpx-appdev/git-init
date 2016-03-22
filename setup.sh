@@ -162,38 +162,35 @@ setBashAliase()
     echo "Setze Bash Aliase"
 
     echo "alias g='git '" >> ~/.cpx_aliases
-    echo "alias got='git '" >> ~/.cpx_aliases
-    echo "alias get='git '" >> ~/.cpx_aliases
-    echo "alias ga='git add'" >> ~/.cpx_aliases
-    echo "alias gs='git status '" >> ~/.cpx_aliases
-    echo "alias gc='git commit '" >> ~/.cpx_aliases
-    echo "alias gcm='git commit -a -m '" >> ~/.cpx_aliases
+    echo "alias gs='git status -s '" >> ~/.cpx_aliases
+    echo "alias gdt='git difftool -dir--diff '" >> ~/.cpx_aliases
+    echo "alias gdts='git difftool -dir--diff --staged '" >> ~/.cpx_aliases
+    echo "alias gd='git diff --word-diff '" >> ~/.cpx_aliases
+    echo "alias gds='git diff --staged --word-diff '" >> ~/.cpx_aliases
+    echo "alias gl='git -c core.pager=\"less -SRF\" log --graph --all --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" '" >> ~/.cpx_aliases
+    echo "alias glm='git -c core.pager=\"less -SRF\" log --graph --all --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" --merges '" >> ~/.cpx_aliases
+    echo "alias gr='git reset '" >> ~/.cpx_aliases
+    echo "alias grh='git reset --hard '" >> ~/.cpx_aliases
+    echo "alias ga='git add --all '" >> ~/.cpx_aliases
+    echo "alias gap='git add --patch '" >> ~/.cpx_aliases
+    echo "alias gcm='git commit -m '" >> ~/.cpx_aliases
+    echo "alias gcma='git commit --amend '" >> ~/.cpx_aliases
+    echo "alias gacm='git !f() { git add --all && git commit -m \"\$1\"; }; f '" >> ~/.cpx_aliases
+    echo "alias gacmp='git !f() { git add --all && git commit -m \"\$1\" && git push; }; f '" >> ~/.cpx_aliases
+    echo "alias gc='git checkout '" >> ~/.cpx_aliases
     echo "alias gb='git branch '" >> ~/.cpx_aliases
-    echo "alias go='git checkout '" >> ~/.cpx_aliases
     echo "alias gf='git fetch '" >> ~/.cpx_aliases
-    echo "alias gd='git diff '" >> ~/.cpx_aliases
-    echo "alias gps='git push '" >> ~/.cpx_aliases
-    echo "alias grb='git rebase '" >> ~/.cpx_aliases
-    echo "alias gpl='git pull '" >> ~/.cpx_aliases
     echo "alias gm='git merge '" >> ~/.cpx_aliases
-    echo "alias gk='gitk --all&'" >> ~/.cpx_aliases
-    echo "alias gx='gitx --all'" >> ~/.cpx_aliases
-    echo "alias gd='git discard '" >> ~/.cpx_aliases
-    echo "alias gda='git discardall'" >> ~/.cpx_aliases
-    echo "alias gwin='git config --global credential.helper wincred'" >> ~/.cpx_aliases
+    echo "alias gff='git merge --ff-only '" >> ~/.cpx_aliases
+    echo "alias gr='git merge --no-ff '" >> ~/.cpx_aliases
+    echo "alias gt='git mergetool '" >> ~/.cpx_aliases
+    echo "alias grb='git rebase '" >> ~/.cpx_aliases
+    echo "alias grbc='git rebase --continue '" >> ~/.cpx_aliases
+    echo "alias gundo='git !f() { git reset --hard \$1 && git clean -df \$1; }; f '" >> ~/.cpx_aliases
 
     echo "__git_complete g _git" >> ~/.cpx_aliases
     echo "__git_complete ga _git_add" >> ~/.cpx_aliases
     echo "__git_complete gs _git_status" >> ~/.cpx_aliases
-    echo "__git_complete gc _git_commit" >> ~/.cpx_aliases
-    echo "__git_complete gcm _git_commit" >> ~/.cpx_aliases
-    echo "__git_complete gb _git_branch" >> ~/.cpx_aliases
-    echo "__git_complete go _git_checkout" >> ~/.cpx_aliases
-    echo "__git_complete gf _git_fetch" >> ~/.cpx_aliases
-    echo "__git_complete gd _git_diff" >> ~/.cpx_aliases
-    echo "__git_complete gps _git_push" >> ~/.cpx_aliases
-    echo "__git_complete gpl _git_pull" >> ~/.cpx_aliases
-    echo "__git_complete gm _git_merge" >> ~/.cpx_aliases
 }
 
 setGitAliase()
