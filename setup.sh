@@ -179,18 +179,35 @@ setBashAliase()
     echo "alias gb='git branch '" >> ~/.cpx_aliases
     echo "alias gf='git fetch '" >> ~/.cpx_aliases
     echo "alias gm='git merge '" >> ~/.cpx_aliases
-    echo "alias gff='git merge --ff-only '" >> ~/.cpx_aliases
-    echo "alias gr='git merge --no-ff '" >> ~/.cpx_aliases
-    echo "alias gt='git mergetool '" >> ~/.cpx_aliases
+    echo "alias gmff='git merge --ff-only '" >> ~/.cpx_aliases
+    echo "alias gmr='git merge --no-ff '" >> ~/.cpx_aliases
+    echo "alias gmt='git mergetool '" >> ~/.cpx_aliases
     echo "alias grb='git rebase '" >> ~/.cpx_aliases
     echo "alias grbc='git rebase --continue '" >> ~/.cpx_aliases
     echo "gacm() { git add --all; git commit -m \"\$1\"; }" >> ~/.cpx_aliases
     echo "gacmp() { git add --all; git commit -m \"\$1\"; git push; }" >> ~/.cpx_aliases
     echo "gundo() { git reset --hard \$1; git clean -df \$1; }" >> ~/.cpx_aliases
 
-    echo "__git_complete g _git" >> ~/.cpx_aliases
-    echo "__git_complete ga _git_add" >> ~/.cpx_aliases
-    echo "__git_complete gs _git_status" >> ~/.cpx_aliases
+  	echo "__git_complete g _git" >> ~/.cpx_aliases
+  	echo "__git_complete gdt _git_difftool" >> ~/.cpx_aliases
+  	echo "__git_complete gdts _git_difftool" >> ~/.cpx_aliases
+  	echo "__git_complete gd _git_diff" >> ~/.cpx_aliases
+  	echo "__git_complete gds _git_diff" >> ~/.cpx_aliases
+  	echo "__git_complete gr _git_reset" >> ~/.cpx_aliases
+  	echo "__git_complete grh _git_reset" >> ~/.cpx_aliases
+  	echo "__git_complete ga _git_add" >> ~/.cpx_aliases
+  	echo "__git_complete gap _git_add" >> ~/.cpx_aliases
+  	echo "__git_complete gcm _git_commit" >> ~/.cpx_aliases
+  	echo "__git_complete gcma _git_commit" >> ~/.cpx_aliases
+  	echo "__git_complete gc _git_checkout" >> ~/.cpx_aliases
+  	echo "__git_complete gb _git_branch" >> ~/.cpx_aliases
+  	echo "__git_complete gf _git_fetch" >> ~/.cpx_aliases
+  	echo "__git_complete gm _git_merge" >> ~/.cpx_aliases
+  	echo "__git_complete gmff _git_merge" >> ~/.cpx_aliases
+  	echo "__git_complete gmr _git_merge" >> ~/.cpx_aliases
+  	echo "__git_complete gmt _git_merge" >> ~/.cpx_aliases
+  	echo "__git_complete grb _git_rebase" >> ~/.cpx_aliases
+  	echo "__git_complete grbc _git_rebase" >> ~/.cpx_aliases
 }
 
 setGitAliase()
