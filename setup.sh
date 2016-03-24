@@ -148,6 +148,7 @@ setGeneralGitConfig()
     git config --global credential.helper store
     git config --global push.default simple
     git config --global fetch.prune true
+    git config --global url."https://".insteadOf git://
 }
 
 setBashAliase()
