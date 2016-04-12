@@ -157,6 +157,11 @@ setGeneralGitConfig()
 
 setBashAliase()
 {
+    if [ ! -f ~/.bashrc ]
+    then
+        touch ~/.bashrc
+    fi
+    
     if ! grep -q "~/.cpx_aliases" ~/.bashrc
     then
         echo "if [ -f ~/.cpx_aliases ]; then . ~/.cpx_aliases; fi" >> ~/.bashrc;
