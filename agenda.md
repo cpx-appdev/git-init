@@ -1,5 +1,13 @@
 - HA
-  - Bash Aliasse und Git Config Aliasse gleich ziehen &#x2713;
+  - Konkrete Bsp. aus aktuellen Projekten sammeln, wo Probleme exisitieren, die ohne Git nicht da wären
+  - Konkrete Bsp. aus aktuellen Projekten sammeln, wo auch mit Git Probleme auftreten
+  - Verbreitung setup.sh (Artikel SharePoint, etc.)
+  - Planung von Workshops, Verbreitung setup.sh
+    - Screenshots von VS Aktionen parallel zu Bash Bsp. in pres
+    - TK: Jana Rechte, Bsp. aus branching pres in git pres
+
+- Alias Cheatsheet
 - Case Sensitive Thematik
-- Planung von Workshops, Verbreitung setup.sh
+- 
+source <(curl -s https://raw.githubusercontent.com/tklepzig/git-init/master/setup.sh)
     
