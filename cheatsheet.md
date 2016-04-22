@@ -65,7 +65,8 @@ Zusätzliche Optionen:
 ```
 --amend
 ```
-Aktuelle Änderungen in den letzten Commit mit integrieren ***NIEMALS BEREITS VERÖFFENTLICHTE COMMITS AMENDEN***
+Aktuelle Änderungen in den letzten Commit mit integrieren 
+* **NIEMALS BEREITS VERÖFFENTLICHTE COMMITS AMENDEN**
 
 ## History anzeigen
 
