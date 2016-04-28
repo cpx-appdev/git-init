@@ -149,6 +149,7 @@ setGeneralGitConfig()
     git config --global push.default simple
     git config --global fetch.prune true
     git config --global url."https://".insteadOf git://
+    git config --global pull.rebase true
     
     # Disable git's own logic for displaying umlauts and using the bash logic
     # So german umlauts are displayed correctly with this configuration
