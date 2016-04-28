@@ -197,6 +197,7 @@ setBashAliase()
     echo "gacm() { git add --all; git commit -m \"\$1\"; }" >> ~/.cpx_aliases
     echo "gacmp() { git add --all; git commit -m \"\$1\"; git push; }" >> ~/.cpx_aliases
     echo "gundo() { git reset --hard \$1; git clean -df \$1; }" >> ~/.cpx_aliases
+    echo "gfrb() { git fetch && git rebase; }" >> ~/.cpx_aliases
 
   	echo "__git_complete g _git" >> ~/.cpx_aliases
   	echo "__git_complete gdt _git_difftool" >> ~/.cpx_aliases
@@ -249,6 +250,7 @@ setGitAliase()
     git config --global alias.rb "rebase"
     git config --global alias.rbc "git rebase --continue"
     git config --global alias.undo "!f() { git reset --hard \$1 && git clean -df \$1; }; f"
+    git config --global alias.frb "!f() { git fetch && git rebase; }; f"
 }
 
 setProMode $1
