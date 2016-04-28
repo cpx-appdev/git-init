@@ -1,5 +1,5 @@
 - HA
-  - Verbreitung setup.sh -> Link in BS Blog auf Artikel
+  - Verbreitung setup.sh -> Link in BS Blog auf Artikel (erl.)
   - Aufnahme Präsentation in Artikel NACH Workshop
   - Alias Cheatsheet vorbereiten
   - Tools evaluieren und in Artikel mit aufführen
