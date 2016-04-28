@@ -1,1 +1,2 @@
+- Quelle: [GitKraken](https://www.gitkraken.com/)
 - bei großen Repositories gibt es scheinbar Probleme beim Wechseln des Branches (bei SAM2GO nicht möglich)
