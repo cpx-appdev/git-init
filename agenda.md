@@ -1,9 +1,11 @@
 - HA
   - Konkrete Bsp. aus aktuellen Projekten sammeln, wo Probleme exisitieren, die ohne Git nicht da wären
   - Konkrete Bsp. aus aktuellen Projekten sammeln, wo auch mit Git Probleme auftreten
-  - Verbreitung setup.sh (Artikel SharePoint, etc.) [TS]
-  - Alias Cheatsheet aufbauen [DV]
+  - Verbreitung setup.sh -> Link in BS Blog auf Artikel
+  - Aufnahme Präsentation in Artikel NACH Workshop
+  - Alias Cheatsheet vorbereiten
   - Tools evaluieren und in Artikel mit aufführen
-    - GitKraken, SourceTree, tortoiseGit 
-- Alias Cheatsheet
+    - GitKraken, SourceTree, tortoiseGit, unGit etc.
+  - Alias für Workflow (fetch, rebase)
+- Alias Cheatsheet erstellen
 - Standard gitignore für verschiedene Projekttypen
