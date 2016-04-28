@@ -1,11 +1,12 @@
 - HA
-  - Konkrete Bsp. aus aktuellen Projekten sammeln, wo Probleme exisitieren, die ohne Git nicht da wären
-  - Konkrete Bsp. aus aktuellen Projekten sammeln, wo auch mit Git Probleme auftreten
   - Verbreitung setup.sh -> Link in BS Blog auf Artikel
   - Aufnahme Präsentation in Artikel NACH Workshop
   - Alias Cheatsheet vorbereiten
   - Tools evaluieren und in Artikel mit aufführen
     - GitKraken, SourceTree, tortoiseGit, unGit etc.
-  - Alias für Workflow (fetch, rebase)
+  - Alias für Workflow (fetch, rebase): frb / gfrb(bash)
+  - alle gitignores aus den aktuellen Projekten sammeln
 - Alias Cheatsheet erstellen
 - Standard gitignore für verschiedene Projekttypen
+- Konkrete Bsp. aus aktuellen Projekten sammeln, wo Probleme exisitieren, die ohne Git nicht da wären
+- Konkrete Bsp. aus aktuellen Projekten sammeln, wo auch mit Git Probleme auftreten
