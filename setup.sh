@@ -173,7 +173,7 @@ setBashAliase()
     echo "Setze Bash Aliase"
 
     echo "alias g='git '" >> ~/.cpx_aliases
-    echo "alias gs='git status -s '" >> ~/.cpx_aliases
+    echo "alias gs='git status -sb '" >> ~/.cpx_aliases
     echo "alias gdt='git difftool -dir--diff '" >> ~/.cpx_aliases
     echo "alias gdts='git difftool -dir--diff --staged '" >> ~/.cpx_aliases
     echo "alias gd='git diff --word-diff '" >> ~/.cpx_aliases
@@ -226,7 +226,7 @@ setGitAliase()
 {
     echo "Setze Git Aliase"
 
-    git config --global alias.s  "status -s"
+    git config --global alias.s  "status -sb"
     git config --global alias.dt "difftool --dir-diff"
     git config --global alias.dts "difftool --dir-diff --staged"
     git config --global alias.d "diff --word-diff"
