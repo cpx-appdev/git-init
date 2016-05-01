@@ -1,10 +1,10 @@
 - HA
-  - Verbreitung setup.sh -> Link in BS Blog auf Artikel (erl.)
+  - ~~Verbreitung setup.sh -> Link in BS Blog auf Artikel~~
   - Aufnahme Präsentation in Artikel NACH Workshop
   - Alias Cheatsheet vorbereiten
   - Tools evaluieren und in Artikel mit aufführen
     - GitKraken, SourceTree, tortoiseGit, unGit etc.
-  - Alias für Workflow (fetch, rebase): frb / gfrb(bash)
+  - ~~Alias für Workflow (fetch, rebase): frb / gfrb(bash)~~
   - alle gitignores aus den aktuellen Projekten sammeln
 - Alias Cheatsheet erstellen
 - Standard gitignore für verschiedene Projekttypen
