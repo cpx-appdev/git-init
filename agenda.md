@@ -1,6 +1,6 @@
 - HA
   - ~~Verbreitung setup.sh -> Link in BS Blog auf Artikel~~
-  - Aufnahme Präsentation in Artikel NACH Workshop
+  - ~~Aufnahme Präsentation in Artikel NACH Workshop~~
   - Alias Cheatsheet vorbereiten
   - Tools evaluieren und in Artikel mit aufführen
     - GitKraken, SourceTree, tortoiseGit, unGit etc.
