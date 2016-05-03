@@ -7,6 +7,7 @@
   - ~~Alias für Workflow (fetch, rebase): frb / gfrb(bash)~~
   - alle gitignores aus den aktuellen Projekten sammeln
 - core.editor konfigurieren
+- vsdiffmerge geht nicht
 - Alias Cheatsheet erstellen
 - Standard gitignore für verschiedene Projekttypen
 - Konkrete Bsp. aus aktuellen Projekten sammeln, wo Probleme exisitieren, die ohne Git nicht da wären
