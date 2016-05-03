@@ -192,4 +192,6 @@ Alle Änderungen an den Dateien rückgängig machen, die **nicht gestaged** sind
 # Weiterführende Links
 
 - https://www.ralfebert.de/git/
+- http://tklepzig.github.io/git-vs-pres/
 - http://tklepzig.github.io/git-branching-pres/
+
