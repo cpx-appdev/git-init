@@ -266,5 +266,3 @@ setConfig "Bash Aliase setzen?" setBashAliase
 setConfig "Git Aliase setzen?" setGitAliase
 
 echo "Installation abgeschlossen"
-
-exit
