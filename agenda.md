@@ -10,6 +10,7 @@
 - vsdiffmerge geht nicht
 - Alias Cheatsheet erstellen
 - Standard gitignore für verschiedene Projekttypen
+    - Stolperfalle nachträgliche git-ignore Regeln bei bereits getrackten Files beschreiben
 - Konkrete Bsp. aus aktuellen Projekten sammeln, wo Probleme exisitieren, die ohne Git nicht da wären
 - Konkrete Bsp. aus aktuellen Projekten sammeln, wo auch mit Git Probleme auftreten
 - 
