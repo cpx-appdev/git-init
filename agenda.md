@@ -13,7 +13,5 @@
     - Stolperfalle nachträgliche git-ignore Regeln bei bereits getrackten Files beschreiben
 - Konkrete Bsp. aus aktuellen Projekten sammeln, wo Probleme exisitieren, die ohne Git nicht da wären
 - Konkrete Bsp. aus aktuellen Projekten sammeln, wo auch mit Git Probleme auftreten
-- 
-
-Tipps&Tricks Sammlung:
-- http://blog.jessehouwing.nl/2013/11/use-git-directly-from-visual-studio.html -->Git Console innerhalb VS
+- Tipps & Tricks Sammlung:
+  - http://blog.jessehouwing.nl/2013/11/use-git-directly-from-visual-studio.html -->Git Console innerhalb VS
