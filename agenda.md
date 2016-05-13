@@ -7,6 +7,8 @@
   - ~~Alias für Workflow (fetch, rebase): frb / gfrb(bash)~~
   - alle gitignores aus den aktuellen Projekten sammeln
 - core.editor konfigurieren
+- meld, kdiff3 unter WIndows konfigurieren
+  - Pfad zur exe, etc.
 - vsdiffmerge geht nicht
 - Alias Cheatsheet erstellen
 - Standard gitignore für verschiedene Projekttypen
