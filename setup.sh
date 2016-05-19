@@ -151,6 +151,7 @@ setGeneralGitConfig()
     git config --global url."https://".insteadOf git://
     git config --global pull.rebase true
     git config --global mergetool.keepBackup false
+    git config --global core.editor notepad.exe
     
     # Disable git's own logic for displaying umlauts and using the bash logic
     # So german umlauts are displayed correctly with this configuration

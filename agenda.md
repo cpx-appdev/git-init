@@ -3,7 +3,6 @@
   - Tools evaluieren und in Artikel mit aufführen
     - GitKraken, SourceTree, tortoiseGit, unGit etc.
   - alle gitignores aus den aktuellen Projekten sammeln
-- core.editor konfigurieren
 - meld, kdiff3 unter WIndows konfigurieren
   - Pfad zur exe, etc.
 - vsdiffmerge geht nicht
