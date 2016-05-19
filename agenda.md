@@ -1,15 +1,16 @@
 - HA
-  - Alias Cheatsheet vorbereiten
   - Tools evaluieren und in Artikel mit aufführen
     - GitKraken, SourceTree, tortoiseGit, unGit etc.
   - alle gitignores aus den aktuellen Projekten sammeln
-- meld, kdiff3 unter WIndows konfigurieren
-  - Pfad zur exe, etc.
+  - meld, kdiff3 unter WIndows konfigurieren
+    - Pfad zur exe, etc.
+  - Alias Cheatsheet erstellen
+    - Tipps & Tricks (git-status-all + Changelog als Alias)
 - vsdiffmerge geht nicht
-- Alias Cheatsheet erstellen
+  - Strategie überlegen
 - Standard gitignore für verschiedene Projekttypen
     - Stolperfalle nachträgliche git-ignore Regeln bei bereits getrackten Files beschreiben
 - Konkrete Bsp. aus aktuellen Projekten sammeln, wo Probleme exisitieren, die ohne Git nicht da wären
 - Konkrete Bsp. aus aktuellen Projekten sammeln, wo auch mit Git Probleme auftreten
 - Tipps & Tricks Sammlung:
-  - http://blog.jessehouwing.nl/2013/11/use-git-directly-from-visual-studio.html -->Git Console innerhalb VS
+  - http://blog.jessehouwing.nl/2013/11/use-git-directly-from-visual-studio.html -->Git Console innerhalb VS (2013)
