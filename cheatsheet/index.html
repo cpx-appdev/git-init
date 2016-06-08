@@ -1,164 +1,174 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Git Cheatsheet</title>
-    <style type="text/css">
-        html,
-        body {
-            margin: 0;
-            font-family: arial;
-        }
-
-        #content {
-            margin: 10px;
-            -webkit-column-count: 3;
-            -moz-column-count: 3;
-            column-count: 3;
-            -webkit-column-gap: 30px;
-            -moz-column-gap: 30px;
-            column-gap: 30px;
-        }
-
-        h1,
-        h2,
-        h3 {
-            margin: 20px 0 10px;
-            padding: 2px;
-            display: block;
-            width: 100%;
-            color: white;
-            background: #515964;
-            font-size: 18px;
-            text-transform: uppercase;
-        }
-
-        h1:first-of-type {
-            margin-top: 0;
-        }
-
-        h3 {
-            background: #3023E8;
-        }
-
-        h4 {
-            margin-bottom: 6px;
-        }
-
-        code {
-            background: #FFF5CE;
-            padding: 2px 4px;
-            margin: 0 0 5px 0;
-            font-size: 16px;
-            color: #707B89;
-        }
-
-        pre {
-            margin: 0;
-        }
-
-        pre > code {
-            display: block;
-            width: 100%;
-        }
-
-        p {
-            margin: 1px 0 10px 0;
-            font-size: 14px;
-        }
-
-        li > strong {
-            font-weight: bold;
-            display: block;
-            padding: 5px;
-            text-align: left;
-            width: 100%;
-            background: #C9391E;
-            color: white;
-        }
-
-        ul,
-        ol {
-            margin: 0;
-        }
-
-        ul {
-            padding: 0 0 15px;
-        }
-
-        ul > li {
-            list-style-type: none;
-        }
-
-        ol {
-            padding-left: 26px;
-        }
-
-        ol > li {
-            margin: 6px 0;
-        }
-
-        @media print {
-            body {
-                -webkit-print-color-adjust: exact;
+    <head>
+        <meta charset="UTF-8">
+        <title>Git Cheatsheet</title>
+        <style type="text/css">
+            body,
+            html {
+                margin: 0;
+                font-family: arial;
             }
+
+            #content {
+                margin: 10px;
+                -webkit-column-count: 3;
+                -moz-column-count: 3;
+                column-count: 3;
+                -webkit-column-gap: 30px;
+                -moz-column-gap: 30px;
+                column-gap: 30px;
+            }
+
+            h1,
+            h2,
+            h3 {
+                margin: 20px 0 10px;
+                padding: 2px;
+                display: block;
+                width: 100%;
+                color: white;
+                background: #515964;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+            h1:first-of-type {
+                margin-top: 0;
+            }
+
+            h3 {
+                background: #3023E8;
+            }
+
+            h4 {
+                margin-bottom: 6px;
+            }
+
+            code {
+                background: #FFF5CE;
+                padding: 2px 4px;
+                margin: 0 0 5px;
+                font-size: 16px;
+                color: #707B89;
+            }
+
+            pre {
+                margin: 0;
+            }
+
+            pre > code {
+                display: block;
+                width: 100%;
+            }
+
+            p {
+                margin: 1px 0 10px;
+                font-size: 14px;
+            }
+
+            li > strong {
+                font-weight: bold;
+                display: block;
+                padding: 5px;
+                text-align: left;
+                width: 100%;
+                background: #C9391E;
+                color: white;
+            }
+
+            ol,
+            ul {
+                margin: 0;
+            }
+
+            ul {
+                padding: 0 0 15px;
+            }
+
+            ul > li {
+                list-style-type: none;
+            }
+
+            ol {
+                padding-left: 26px;
+            }
+
+            ol > li {
+                margin: 6px 0;
+            }
+            @media print {
+                body {
+                    -webkit-print-color-adjust: exact;
+                }
+            }
+
+        </style>
+        <style media="print">
+            #content {
+                margin: 0;
+            }
+
+            h2 {
+                -webkit-column-break-before: always;
+                page-break-before: always;
+                break-before: always;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="create">
+            <input type="file" id="file" name="files[]"/>
+            <button id="fetch-basic">Fetch Basic-Cheatsheet from Github</button>
+            <button id="fetch-alias">Fetch Alias-Cheatsheet from Github</button>
+            <button id="fetch-advanced">Fetch Advanced-Cheatsheet from Github</button>
+        </div>
+        <div id="content"/>
+    </body>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/1.3.0/showdown.min.js"></script>
+    <script src="fetch.js"></script>
+    <script type="text/javascript">
+        function github(name) {
+            fetch('https://raw.githubusercontent.com/tklepzig/git-init/master/' + name + '.md').then(function(response) {
+                return response.text()
+            }).then(function(markdown) {
+                var converter = new showdown.Converter(),
+                    html = converter.makeHtml(markdown);
+                document.getElementById("create").remove();
+                document.getElementById("content").innerHTML = html;
+            }).catch(function(error) {
+                console.log(error);
+            })
         }
-    </style>
-    <style media="print">
-        #content {
-            margin: 0;
+
+        function local(e) {
+            var file = e.target.files[0];
+
+            var reader = new FileReader();
+
+            reader.onload = function() {
+                var converter = new showdown.Converter(),
+                    html = converter.makeHtml(reader.result);
+                document.getElementById("create").remove();
+                document.getElementById("content").innerHTML = html;
+            };
+
+            reader.readAsText(file);
         }
 
-        h2 {
-            -webkit-column-break-before: always;
-            page-break-before: always;
-            break-before: always;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="create">
-        <input type="file" id="file" name="files[]" />
-        <button id="fetch">Fetch from Github</button>
-    </div>
-    <div id="content" />
-</body>
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/1.3.0/showdown.min.js"></script>
-<script src="fetch.js"></script>
-<script type="text/javascript">
-    function github() {
-        fetch('https://raw.githubusercontent.com/tklepzig/git-init/master/cheatsheet.md').then(function(response) {
-            return response.text()
-        }).then(function(markdown) {
-            var converter = new showdown.Converter(),
-                html = converter.makeHtml(markdown);
-            document.getElementById("create").remove();
-            document.getElementById("content").innerHTML = html;
-        }).catch(function(error) {
-            console.log(error);
-        })
-    }
-
-    function local(e) {
-        var file = e.target.files[0];
-
-        var reader = new FileReader();
-
-        reader.onload = function() {
-            var converter = new showdown.Converter(),
-                html = converter.makeHtml(reader.result);
-            document.getElementById("create").remove();
-            document.getElementById("content").innerHTML = html;
-        };
-
-        reader.readAsText(file);
-    }
-
-    document.getElementById('file').addEventListener('change', local, false);
-    document.getElementById('fetch').addEventListener('click', github, false);
-</script>
+        document.getElementById('file').addEventListener('change', local, false);
+        document.getElementById('fetch-basic').addEventListener('click', function() {
+            github('cheatsheet');
+        }, false);
+        document.getElementById('fetch-alias').addEventListener('click', function() {
+            github('alias-cheatsheet');
+        }, false);
+        document.getElementById('fetch-advanced').addEventListener('click', function() {
+            github('cheatsheet-advanced');
+        }, false);
+    </script>
 
 </html>
