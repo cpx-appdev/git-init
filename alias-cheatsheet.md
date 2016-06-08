@@ -109,7 +109,7 @@ Alle Änderungen des Remote Repository in das lokale Repository laden, dabei wir
 ```
 $ git frb
 ```
-Alle Änderungen des Remote Repository in das lokale Repository laden und anschließend ein Rebase ausführen, um das  Arbeitsverzeichnis zu aktualisieren
+Alle Änderungen des Remote Repository in das Arbeitsverzeichnis laden (unter Verwendung eines Rebase)
 
 # Branching & Merging
 #### Branch-Verwaltung
