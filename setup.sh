@@ -181,6 +181,7 @@ setBashAliase()
     echo "alias gd='git diff --word-diff '" >> ~/.cpx_aliases
     echo "alias gds='git diff --staged --word-diff '" >> ~/.cpx_aliases
     echo "alias gl='git -c core.pager=\"less -SRF\" log --graph --all --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" '" >> ~/.cpx_aliases
+    echo "alias gls='git -c core.pager=\"less -SRF\" log --graph --all --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" -10 '" >> ~/.cpx_aliases
     echo "alias glm='git -c core.pager=\"less -SRF\" log --graph --all --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" --merges '" >> ~/.cpx_aliases
     echo "alias gr='git reset '" >> ~/.cpx_aliases
     echo "alias grh='git reset --hard '" >> ~/.cpx_aliases
@@ -234,6 +235,7 @@ setGitAliase()
     git config --global alias.d "diff --word-diff"
     git config --global alias.ds "diff --staged --word-diff"
     git config --global alias.l "-c core.pager='less -SRF' log --graph --all --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\""
+    git config --global alias.ls "-c core.pager='less -SRF' log --graph --all --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" -10"
     git config --global alias.lm "-c core.pager='less -SRF' log --graph --all --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" --merges"
     git config --global alias.r "reset"
     git config --global alias.rh "reset --hard"
