@@ -6,11 +6,5 @@
     - Pfad zur exe, etc.
   - Alias Cheatsheet erstellen
     - Tipps & Tricks (git-status-all + Changelog als Alias)
-- vsdiffmerge geht nicht
-  - Strategie überlegen
-- Standard gitignore für verschiedene Projekttypen
-    - Stolperfalle nachträgliche git-ignore Regeln bei bereits getrackten Files beschreiben
 - Konkrete Bsp. aus aktuellen Projekten sammeln, wo Probleme exisitieren, die ohne Git nicht da wären
-- Konkrete Bsp. aus aktuellen Projekten sammeln, wo auch mit Git Probleme auftreten
-- Tipps & Tricks Sammlung:
-  - http://blog.jessehouwing.nl/2013/11/use-git-directly-from-visual-studio.html -->Git Console innerhalb VS (2013)
+- Konkrete Bsp. aus aktuellen Projekten sammeln, bei denen auch mit Git Probleme auftreten
