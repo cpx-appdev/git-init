@@ -5,6 +5,8 @@
   - -u Hinweis in README.md
   - Artikel erweitern mit Verweis auf Alias Cheatsheet und -u
   - git-status-all + Changelog als Alias in Alias-Cheatsheet und in setup.sh
+  - alle cheatsheets in den ordner cheatsheet (links anpassen)
+  - Bessere Ordnerstruktur in Repo
   - Tools evaluieren und in Artikel mit aufführen
     - GitKraken, SourceTree, tortoiseGit, unGit etc.
   - alle gitignores aus den aktuellen Projekten sammeln
