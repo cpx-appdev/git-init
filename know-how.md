@@ -1,1 +1,2 @@
 - Nachträgliche git-ignore Regeln bei bereits getrackten Files erstellen (clean Befehl bschreiben, inkl. Simulationsmodus)
+- [Git Console innerhalb VS (2013)] (http://blog.jessehouwing.nl/2013/11/use-git-directly-from-visual-studio.html)
