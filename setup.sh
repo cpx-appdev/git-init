@@ -1,6 +1,7 @@
 #!/bin/bash
 
 proMode=false
+updateOnly=false
 
 setProMode()
 {
@@ -8,6 +9,15 @@ setProMode()
     then
         proMode=true
         echo "Pro Mode aktiviert"
+    fi
+}
+
+setUpdateOnly()
+{
+    if [[ $1 == "-u" ]] || [[ $1 == "--update-only" ]]
+    then
+        updateOnly=true
+        echo "Update-Only aktiviert"
     fi
 }
 
@@ -152,7 +162,7 @@ setGeneralGitConfig()
     git config --global pull.rebase true
     git config --global mergetool.keepBackup false
     git config --global core.editor notepad.exe
-    
+
     # Disable git's own logic for displaying umlauts and using the bash logic
     # So german umlauts are displayed correctly with this configuration
     git config --global core.quotepath false
@@ -164,7 +174,7 @@ setBashAliase()
     then
         touch ~/.bashrc
     fi
-    
+
     if ! grep -q "~/.cpx_aliases" ~/.bashrc
     then
         echo "if [ -f ~/.cpx_aliases ]; then . ~/.cpx_aliases; fi" >> ~/.bashrc;
@@ -259,11 +269,16 @@ setGitAliase()
 }
 
 setProMode $1
+setUpdateOnly $1
 
-setConfig "Benutzernamen setzen?" setUsername user.name
-setConfig "E-Mail Adresse setzen?" setEmail user.email
-setConfig "Setze Diff Tool?" setDiffTool diff.tool
-setConfig "Setze Merge Tool?" setMergeTool merge.tool
+if ! $updateOnly
+then
+    setConfig "Benutzernamen setzen?" setUsername user.name
+    setConfig "E-Mail Adresse setzen?" setEmail user.email
+    setConfig "Setze Diff Tool?" setDiffTool diff.tool
+    setConfig "Setze Merge Tool?" setMergeTool merge.tool
+fi
+
 setConfig "Allgemeine Git Konfiguration setzen?" setGeneralGitConfig
 setConfig "Bash Aliase setzen?" setBashAliase
 setConfig "Git Aliase setzen?" setGitAliase

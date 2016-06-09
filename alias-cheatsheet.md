@@ -78,12 +78,12 @@ $ git l
 ```
 $ git ls
 ```
-Wie `git l`, zeigt aber nur die letzten 10 Commits an
+Wie git l, zeigt aber nur die letzten 10 Commits an
 
 ```
 $ git lm
 ```
-Wie `git l`, listet aber nur Merge-Commits auf
+Wie git l, listet aber nur Merge-Commits auf
 
 #### Änderungen rückgängig machen
 

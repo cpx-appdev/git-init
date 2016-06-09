@@ -103,6 +103,14 @@
                 }
             }
 
+            #content.alias h4
+            {
+                margin-top: 0;
+            }
+            #content.alias p
+            {
+                padding-bottom: 8px;
+            }
         </style>
         <style media="print">
             #content {
@@ -139,6 +147,7 @@
                     html = converter.makeHtml(markdown);
                 document.getElementById("create").remove();
                 document.getElementById("content").innerHTML = html;
+                document.getElementById("content").className = "alias";
             }).catch(function(error) {
                 console.log(error);
             })
