@@ -12,22 +12,22 @@ Ausstehende Änderungen kurz und knapp anzeigen
 ```
 $ git dt
 ```
-Öffnet das konfigurierte Diff Tool und zeigt alle Änderunge der Dateien an, die sich **nicht** in der Staging Area befinden
+Öffnet das konfigurierte Diff Tool und zeigt alle Änderungen der Dateien an, die sich **nicht** in der Staging Area befinden
 
 ```
 $ git dts
 ```
-Öffnet das konfigurierte Diff Tool und zeigt alle Änderunge der Dateien an, die sich in der Staging Area befinden
+Öffnet das konfigurierte Diff Tool und zeigt alle Änderungen der Dateien an, die sich in der Staging Area befinden
 
 ```
 $ git d
 ```
-Zeigt alle Änderunge der Dateien an, die sich **nicht** in der Staging Area befinden
+Zeigt alle Änderungen der Dateien an, die sich **nicht** in der Staging Area befinden
 
 ```
 $ git ds
 ```
-Zeigt alle Änderunge der Dateien an, die sich in der Staging Area befinden
+Zeigt alle Änderungen der Dateien an, die sich in der Staging Area befinden
 
 #### Änderungen hinzufügen
 
