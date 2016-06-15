@@ -1,5 +1,4 @@
 - HA
-  - Alias Cheatsheet anders farbig
   - Hinweis auf git repo (link zum Script) im Cheatsheet
     - mit Hinweis auf -u
   - -u Hinweis in README.md
