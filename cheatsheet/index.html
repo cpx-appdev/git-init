@@ -22,7 +22,7 @@
   <script src="fetch.js"></script>
   <script type="text/javascript">
     function github(name) {
-      fetch('https://raw.githubusercontent.com/tklepzig/git-init/master/' + name + '.md').then(function(response) {
+      fetch('https://raw.githubusercontent.com/tklepzig/git-init/master/cheatsheet/sheets/' + name + '.md').then(function(response) {
         return response.text()
       }).then(function(markdown) {
         var converter = new showdown.Converter(),
