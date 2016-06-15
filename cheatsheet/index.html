@@ -30,6 +30,12 @@
         document.getElementById("create").remove();
         document.getElementById("content").innerHTML = html;
         document.getElementById("content").className = "alias";
+
+        //load separate css for special cheatsheet
+        var headHTML = document.getElementsByTagName('head')[0].innerHTML;
+        headHTML += '<link type="text/css" rel="stylesheet" href="/styles/' + name + '.css">';
+        document.getElementsByTagName('head')[0].innerHTML = headHTML;
+
       }).catch(function(error) {
         console.log(error);
       })
