@@ -1,4 +1,4 @@
-# Alias-Cheatsheet für gemeinsame Aliase
+# Setup für Alias-Cheatsheet
 
 ```
 $ source <(curl -s https://raw.githubusercontent.com/tklepzig/git-init/master/setup.sh) -u
