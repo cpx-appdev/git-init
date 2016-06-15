@@ -1,0 +1,9 @@
+#content {
+    margin: 0;
+}
+
+h2 {
+    -webkit-column-break-before: always;
+    page-break-before: always;
+    break-before: always;
+}
