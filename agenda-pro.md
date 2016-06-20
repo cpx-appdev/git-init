@@ -1,0 +1,5 @@
+- Patches (apply, am)
+- worktree
+- submodules
+- filter-branch
+- Reset & Revert Würgflöhe
