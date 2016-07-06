@@ -212,6 +212,8 @@ setBashAliase()
     echo "gacmp() { git add --all; git commit -m \"\$1\"; git push; }" >> ~/.cpx_aliases
     echo "gundo() { git reset --hard \$1; git clean -df \$1; }" >> ~/.cpx_aliases
     echo "gfrb() { git fetch && git rebase; }" >> ~/.cpx_aliases
+    echo "alias gsw='git show --word-diff --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" '" >> ~/.cpx_aliases
+    echo "alias gswn='git show --word-diff --name-status --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" '" >> ~/.cpx_aliases
 
   	echo "__git_complete g _git" >> ~/.cpx_aliases
   	echo "__git_complete gdt _git_difftool" >> ~/.cpx_aliases
@@ -267,6 +269,9 @@ setGitAliase()
     git config --global alias.undo "!f() { git reset --hard \$1 && git clean -df \$1; }; f"
     git config --global alias.frb "!f() { git fetch && git rebase; }; f"
     git config --global alias.dummy "commit --allow-empty -m 'dummy commit, contains no change'"
+    git config --global alias.sw "show --word-diff --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\""
+    git config --global alias.swn "show --word-diff --name-status --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\""
+
 }
 
 setProMode $1
