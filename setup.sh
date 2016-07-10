@@ -200,6 +200,8 @@ setBashAliase()
     echo "alias gcm='git commit -m '" >> ~/.cpx_aliases
     echo "alias gcma='git commit --amend '" >> ~/.cpx_aliases
     echo "alias gc='git checkout '" >> ~/.cpx_aliases
+    echo "alias gp='git push '" >> ~/.cpx_aliases
+    echo "alias gpt='git push --tags '" >> ~/.cpx_aliases
     echo "alias gb='git branch '" >> ~/.cpx_aliases
     echo "alias gf='git fetch '" >> ~/.cpx_aliases
     echo "alias gm='git merge '" >> ~/.cpx_aliases
@@ -257,6 +259,8 @@ setGitAliase()
     git config --global alias.cma "commit --amend"
     git config --global alias.acm "!f() { git add --all && git commit -m \"\$1\"; }; f"
     git config --global alias.acmp "!f() { git add --all && git commit -m \"\$1\" && git push; }; f"
+    git config --global alias.p "push"
+    git config --global alias.pt "push --tags"
     git config --global alias.c "checkout"
     git config --global alias.b "branch"
     git config --global alias.f "fetch"
@@ -271,7 +275,6 @@ setGitAliase()
     git config --global alias.dummy "commit --allow-empty -m 'dummy commit, contains no change'"
     git config --global alias.sw "show --word-diff --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\""
     git config --global alias.swn "show --word-diff --name-status --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\""
-
 }
 
 setProMode $1
