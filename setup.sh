@@ -155,13 +155,11 @@ setMergeTool()
 setGeneralGitConfig()
 {
     echo "Setze allgemeine Git Konfiguration"
-    git config --global credential.helper store
     git config --global push.default simple
     git config --global fetch.prune true
     git config --global url."https://".insteadOf git://
     git config --global pull.rebase true
     git config --global mergetool.keepBackup false
-    git config --global core.editor notepad.exe
 
     # Disable git's own logic for displaying umlauts and using the bash logic
     # So german umlauts are displayed correctly with this configuration
