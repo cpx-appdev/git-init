@@ -1,6 +1,6 @@
 - Patches (apply, am) [HF]
 - worktree [JH, TK]
-- submodules & alternatives [DV]
+- submodules & sub-tree merge [DV]
 - filter-branch [JH, TK]
 - Reset & Revert Würgflöhe
 - git log
