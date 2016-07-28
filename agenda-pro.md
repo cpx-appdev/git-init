@@ -1,6 +1,10 @@
+- Anwendungsfälle (Wofür, Wofür nicht), Pro, Con
+  - Worktree
+  - Subtree
+  - Submodules
 - Patches (apply, am) [HF]
-- worktree [JH, TK]
-- submodules & sub-tree merge [DV]
+- ~~worktree [JH, TK]~~
+- ~~submodules & sub-tree merge [DV]~~
 - filter-branch [JH, TK]
 - Reset & Revert Würgflöhe
 - git log
