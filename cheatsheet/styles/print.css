@@ -1,9 +1,10 @@
 #content {
     margin: 0;
+    font-size: 0.7em;
 }
 
-h2 {
+/*h2 {
     -webkit-column-break-before: always;
     page-break-before: always;
     break-before: always;
-}
+}*/

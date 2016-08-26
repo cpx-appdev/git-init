@@ -51,11 +51,6 @@ $ git stash list
 Listet alle Stash-Einträge auf
 
 ```
-$ git stash show stash@{1} -p
-```
-Zeigt alle Änderungen für diesem Stash-Eintrag
-
-```
 $ git stash apply stash@{1}
 ```
 Gewählter Arbeitsstand aus dem Stash wird in das Arbeitsverzeichnis übernommen und bleibt im Stash erhalten.
@@ -64,7 +59,6 @@ Gewählter Arbeitsstand aus dem Stash wird in das Arbeitsverzeichnis übernommen
 $ git stash pop
 ```
 Zuletzt abgelegter Arbeitsstand wird in das Arbeitsverzeichnis übernommen und aus dem Stash gelöscht. Bei Konflikten bleibt der Eintrag im Stash erhalten.
-
 
 #### Dateien für den Commit vorbereiten (Staging)
 ```
