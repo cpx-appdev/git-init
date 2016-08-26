@@ -20,7 +20,7 @@ Klont den Inhalt eines Remote Repositories in das aktuelle Verzeichnis.
 ```
 $ git status
 ```
-Zeigt alle lokalen Änderungen im aktuellen Repository an (entspricht *Pending Changes* im TFVC)
+Zeigt alle lokalen Änderungen im aktuellen Repository an (entspricht *Pending Changes* im TFVC). Weiterhin werden z.B. bei Merge-Konflikten nützliche Hilfe-Hinweise für mögliche weitere Kommandos angezeigt.
 
 #### Dateidifferenzen  anzeigen
 ```
@@ -165,6 +165,16 @@ $ git mergetool
 ```
 Öffnet das konfigurierte Standard Mergetool, um die Merge Konflikte aufzulösen.
 
+```
+$ git mergetool --tool=kdiff3
+```
+Öffnet das angegebene Mergetool, um die Merge Konflikte aufzulösen.
+
+```
+$ git checkout --conflict=merge
+```
+Bei fehlerhaftem Merge-Versuch, werden die Merge-Marker wieder in die konfliktbehafteten Dateien eingefügt und Merge-Konflikte können erneut aufgelöst werden.
+
 #### Rebase
 ```
 $ git rebase
@@ -188,6 +198,9 @@ Alle Änderungen an den Dateien rückgängig machen, die **nicht gestaged** sind
 3. Merge-Konflikte?
     1. `git mergetool`
     2. `git rebase --continue`
+
+(Abbruch des rebase-Vorganges jederzeit möglich mit `git rebase --abort`)
+
 
 # Weiterführende Links
 
