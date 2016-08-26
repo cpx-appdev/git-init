@@ -11,6 +11,6 @@
 - git log
   - `--simplify-by-decoration`
   - `--date-order`
-- git bisect?
+- git bisect? https://github.com/agross/git-bisect-demo
 
 Book: https://git-scm.com/book/en/v2
