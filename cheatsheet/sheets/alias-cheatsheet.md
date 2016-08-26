@@ -121,6 +121,11 @@ $ git frb
 ```
 Alle Änderungen des Remote Repository in das Arbeitsverzeichnis laden (unter Verwendung eines Rebase)
 
+```
+$ git p origin:*Branchname*
+```
+Löscht den angegebenen *remote* Branch *Branchname*
+
 # Branching & Merging
 #### Branch-Verwaltung
 
@@ -133,6 +138,21 @@ Branch mit dem Namen *Branchname* anlegen
 $ git c *Branchname*
 ```
 Zum Branch *Branchname* wechseln
+
+```
+$ git c -
+```
+Zwischen den zuletzt genutzten Branches hin und her wechseln
+
+```
+$ git b -d *Branchname*
+```
+Aktuellen bzw. übergebenen Branch *Branchname* löschen (nur lokal)
+
+```
+$ git b -a
+```
+Listet alle lokalen und remote Branches auf
 
 #### Merging
 
