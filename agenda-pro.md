@@ -12,5 +12,7 @@
   - `--simplify-by-decoration`
   - `--date-order`
 - git bisect? https://github.com/agross/git-bisect-demo
+- Neue Aliase:
+- Alle Branches anzeigen, die noch nicht nach dev gemergt wurden
 
 Book: https://git-scm.com/book/en/v2
