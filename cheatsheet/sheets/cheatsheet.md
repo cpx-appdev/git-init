@@ -33,6 +33,39 @@ $ difftool
 ```
 Öffnet ein grafisches Tool um Änderungen anzuzeigen
 
+#### Änderungen stashen
+
+```
+$ git stash
+```
+Alle geänderten Dateien werden gestasht und das Arbeitsverzeichnis bereinigt (Arbeitsstand wechselt zum letzten Commit)
+
+```
+$ git stash save -u *Stash-Name*
+```
+Alle geänderten Dateien werden gestasht unter dem Namen *Stash-Name* und das Arbeitsverzeichnis bereinigt (Arbeitsstand wechselt zum letzten Commit)
+
+```
+$ git stash list
+```
+Listet alle Stash-Einträge auf
+
+```
+$ git stash show stash@{1} -p
+```
+Zeigt alle Änderungen für diesem Stash-Eintrag
+
+```
+$ git stash apply stash@{1}
+```
+Gewählter Arbeitsstand aus dem Stash wird in das Arbeitsverzeichnis übernommen und bleibt im Stash erhalten.
+
+```
+$ git stash pop
+```
+Zuletzt abgelegter Arbeitsstand wird in das Arbeitsverzeichnis übernommen und aus dem Stash gelöscht. Bei Konflikten bleibt der Eintrag im Stash erhalten.
+
+
 #### Dateien für den Commit vorbereiten (Staging)
 ```
 $ git add *Pfad/zu/Datei*
@@ -146,7 +179,7 @@ $ git push --tags
 ```
 $ git merge *Branch*
 ```
-Den angegebenen *Branch* in den aktuellen branch mergen, dabei entscheidet Git selbst, ob es rekursiv oder mittels fast-forward geschieht
+Den angegebenen *Branch* in den aktuellen Branch mergen, dabei entscheidet Git selbst, ob es rekursiv oder mittels fast-forward geschieht
 
 Zusätzliche Optionen:
 
