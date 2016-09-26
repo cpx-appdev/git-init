@@ -1,8 +1,8 @@
+- Separate Berechtigung für push -f, andere remote branches löschen, etc. im TFS testen
 - Anwendungsfälle (Wofür, Wofür nicht), Pro, Con
   - Worktree
   - Subtree
   - Submodules
-- Separate Berechtigung für push -f, andere remote branches löschen, etc. im TFS testen
 - Patches (apply, am) [HF]
 - ~~worktree [JH, TK]~~
 - ~~submodules & sub-tree merge [DV]~~
