@@ -15,5 +15,6 @@
 - Alle Branches anzeigen, die noch nicht nach dev gemergt wurden
 - Git Internals (objects, tree, etc.)
 - Git API (libgit)
+- Git Hooks
 
 Book: https://git-scm.com/book/en/v2
