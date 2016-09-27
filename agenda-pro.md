@@ -13,5 +13,7 @@
 - git bisect? https://github.com/agross/git-bisect-demo
 - Neue Aliase:
 - Alle Branches anzeigen, die noch nicht nach dev gemergt wurden
+- Git Internals (objects, tree, etc.)
+- Git API (libgit)
 
 Book: https://git-scm.com/book/en/v2
