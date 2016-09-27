@@ -1,4 +1,3 @@
-- Separate Berechtigung für push -f, andere remote branches löschen, etc. im TFS testen
 - Anwendungsfälle (Wofür, Wofür nicht), Pro, Con
   - Worktree
   - Subtree
