@@ -6,5 +6,5 @@ git apply --stat path/to/patch/file
 git apply --check path/to/patch/file
 
 ### Anwenden
-git am path/to/patch/file
+git am -3 --keep-cr path/to/patch/file 
 
