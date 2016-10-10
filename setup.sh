@@ -269,7 +269,7 @@ setGitAliase()
     git config --global alias.mr "merge --no-ff"
     git config --global alias.mt "mergetool"
     git config --global alias.rb "rebase"
-    git config --global alias.rbc "git rebase --continue"
+    git config --global alias.rbc "rebase --continue"
     git config --global alias.undo "!f() { git reset --hard \$1 && git clean -df \$1; }; f"
     git config --global alias.frb "!f() { git fetch && git rebase; }; f"
     git config --global alias.dummy "commit --allow-empty -m 'dummy commit, contains no change'"
