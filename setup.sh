@@ -193,7 +193,7 @@ setBashAliase()
     echo "alias glm='git -c core.pager=\"less -SRF\" log --graph --all --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" --merges '" >> ~/.cpx_aliases
     echo "alias gr='git reset '" >> ~/.cpx_aliases
     echo "alias grh='git reset --hard '" >> ~/.cpx_aliases
-    echo "alias ga='git add --all '" >> ~/.cpx_aliases
+    echo "ga() { git add \"./*\$1*\"; }" >> ~/.cpx_aliases
     echo "alias gap='git add --patch '" >> ~/.cpx_aliases
     echo "alias gcm='git commit -m '" >> ~/.cpx_aliases
     echo "alias gcma='git commit --amend '" >> ~/.cpx_aliases
@@ -253,7 +253,7 @@ setGitAliase()
     git config --global alias.lm "-c core.pager='less -SRF' log --graph --all --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" --merges"
     git config --global alias.r "reset"
     git config --global alias.rh "reset --hard"
-    git config --global alias.a "add --all"
+    git config --global alias.a "!f() { git add \"./*\$1*\"; }; f"
     git config --global alias.ap "add --patch"
     git config --global alias.cm "commit -m"
     git config --global alias.cma "commit --amend"
