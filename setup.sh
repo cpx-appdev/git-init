@@ -215,7 +215,9 @@ setBashAliase()
     echo "alias gsw='git show --word-diff --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" '" >> ~/.cpx_aliases
     echo "alias gswn='git show --word-diff --name-status --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\" '" >> ~/.cpx_aliases
     echo "alias gcl='git clean -xdf '" >> ~/.cpx_aliases
-    echo "alias gcln='git clean -xdfn '" >> ~/.cpx_aliases
+    echo "alias gcln='git clean -xdfn '" >> ~/.cpx_aliases    
+    echo "alias gst='git stash '" >> ~/.cpx_aliases
+    echo "alias gstp='git stash pop '" >> ~/.cpx_aliases
 
   	echo "__git_complete g _git" >> ~/.cpx_aliases
   	echo "__git_complete gdt _git_difftool" >> ~/.cpx_aliases
@@ -277,6 +279,8 @@ setGitAliase()
     git config --global alias.swn "show --word-diff --name-status --format=\"%C(yellow)%h%C(reset) - %C(cyan)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%Creset\""
     git config --global alias.cl "clean -xdf"
     git config --global alias.cln "clean -xdfn"
+    git config --global alias.st "stash"
+    git config --global alias.stp "stash pop"
 }
 
 setProMode $1
