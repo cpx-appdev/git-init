@@ -1,4 +1,9 @@
 - Vorbereitung zum nä. Mal: Aufbau Git Verzeichnis (objects, refs, etc.)
+- In ALiase:
+  - changelog
+  - status all
+  - show not merged branches into x (git branch --no-merged x)
+  - show not yet pushed branches (git branch -vv)
 
 ---
 
