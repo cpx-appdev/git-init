@@ -1,6 +1,7 @@
-- ~~Patches (apply, am) [HF]~~
-- ~~worktree [JH, TK]~~
-- ~~submodules & sub-tree merge [DV]~~
+- Vorbereitung zum nä. Mal: Aufbau Git Verzeichnis (objects, refs, etc.)
+
+---
+
 - filter-branch [JH, TK]
 - git log
   - `--simplify-by-decoration`
