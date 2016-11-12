@@ -1,9 +1,0 @@
-- HA
-  - git-status-all + Changelog als Alias in Alias-Cheatsheet und in setup.sh
-  - Tools evaluieren und in Artikel mit aufführen
-    - GitKraken, SourceTree, tortoiseGit, unGit etc.
-  - alle gitignores aus den aktuellen Projekten sammeln
-  - meld, kdiff3 unter Windows konfigurieren
-    - Pfad zur exe, etc.
-- Konkrete Bsp. aus aktuellen Projekten sammeln, wo Probleme exisitieren, die ohne Git nicht da wären
-- Konkrete Bsp. aus aktuellen Projekten sammeln, bei denen auch mit Git Probleme auftreten
