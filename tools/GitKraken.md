@@ -1,4 +1,0 @@
-- Quelle: [GitKraken](https://www.gitkraken.com/)
-- ~~bei großen Repositories gibt es scheinbar Probleme beim Wechseln des Branches (bei SAM2GO nicht möglich)~~
-- sehr gute Übersicht über Branches (Remote und lokal) und Tags
-- Umfangreiche git Funktionalitäten umgesetzt
