@@ -164,6 +164,8 @@ setGeneralGitConfig()
     # Disable git's own logic for displaying umlauts and using the bash logic
     # So german umlauts are displayed correctly with this configuration
     git config --global core.quotepath false
+
+    git config --global color.status always
 }
 
 setBashAliase()
@@ -184,7 +186,7 @@ setBashAliase()
 
     echo "#!/bin/bash" > ~/git-status-all.sh
     echo "dir=\${1-.}" >> ~/git-status-all.sh
-    echo "find \$dir -maxdepth 1 -mindepth 1 -type d -exec sh -c \"test -d \\\"{}/.git\\\" && (echo \\\"--------------------------------\\\" && echo \\\"{}\\\" && cd \\\"{}\\\" && git status -sb && echo && echo \\\"Branches:\\\" && git branch -vv && echo && echo)\" \\;" >> ~/git-status-all.sh
+    echo "find \$dir -maxdepth 1 -mindepth 0 -type d -exec sh -c \"test -d \\\"{}/.git\\\" && (echo \\\"--------------------------------\\\" && echo \\\"{}\\\" && cd \\\"{}\\\" && git status -sb && echo && echo \\\"Branches:\\\" && git branch -vv --color && echo && echo)\" \\; | less -R" >> ~/git-status-all.sh
 
 
     echo "alias g='git '" >> ~/.cpx_aliases
