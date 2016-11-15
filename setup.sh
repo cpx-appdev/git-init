@@ -276,6 +276,7 @@ setGitAliase()
     git config --global alias.pt "push --tags"
     git config --global alias.c "checkout"
     git config --global alias.b "branch"
+    git config --global alias.bd "branch -d"
     git config --global alias.ba "branch -a"
     git config --global alias.bnm "branch --no-merged"
     git config --global alias.f "fetch"
