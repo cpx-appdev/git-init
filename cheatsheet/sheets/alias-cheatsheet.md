@@ -8,182 +8,80 @@ Führt das Setup-Script aus:
 
   > **Mit** dem Parameter **-u** wird das Setup-Script im Update-Modus ausgeführt, sodass NUR die Aliase  aktualisiert werden.
 
-# Lokale Änderungen
 
-#### Status anzeigen
+# Aliase für einzelne Befehle
 
-```
-$ git s
-```
-Ausstehende Änderungen kurz und knapp anzeigen
+Alias|Befehl/Erklärung
+--|--
+s|status
+si|status + zeige ignorierte Dateien
+dt|difftool
+dts|difftool für Dateien in der Staging Area
+d [*pattern*]|diff
+ds [*pattern*]|diff für Dateien in der Staging Area
+l|log
+lm|log (nur Merge-Commits)
+ln|log (zeige pro Commit auch die geänderten Dateien an)
+ld|log (in Datumsreihenfolge)
+r [*pattern*]|reset
+rh|reset --hard
+rs|reset --soft
+a [*pattern*]|add
+ap [*pattern*]|add --patch
+cm|commit -m
+cma|commit --amend
+p|push
+pt|push --tags
+c|checkout
+b|branch
+bd|branch -d (**Lokalen** Branch löschen)
+ba|branch (auch Remote-Branches)
+bnm|branch (zeige die Branches, die noch nicht gemerged sind)
+f|fetch
+m|merge
+ma|merge --abort
+mff|merge (nur Fast-Forward erlaubt)
+mr| (nur Recursive erlaubt)
+mt|mergetool
+rb|rebase
+rbc|rebase --continue
+rba|rebase --abort
+sw|show
+swn|show  (zeige auch die geänderten Dateien an)
+cl|clean
+cln|clean, aber nur simulieren
+st|stash
+stp|stash pop
 
-#### Änderungen anzeigen
+# Aliase für komplexere Aufgaben
 
-```
-$ git dt
-```
-Öffnet das konfigurierte Diff Tool und zeigt alle Änderungen der Dateien an, die sich **nicht** in der Staging Area befinden
+#### acm *commit message*
 
-```
-$ git dts
-```
-Öffnet das konfigurierte Diff Tool und zeigt alle Änderungen der Dateien an, die sich in der Staging Area befinden
+- Alle Dateien stagen und sofort committen (gesamtes Repository)
 
-```
-$ git d
-```
-Zeigt alle Änderungen der Dateien an, die sich **nicht** in der Staging Area befinden
+#### acmp *commit message*
 
-```
-$ git ds
-```
-Zeigt alle Änderungen der Dateien an, die sich in der Staging Area befinden
+- Wie *acm*, aber zusätzlich auch noch pushen
 
-#### Änderungen hinzufügen
+#### undo
 
-```
-$ git a [*Pfad*]
-```
-Alle Dateien oder nur die unterhalb des angegeben Pfades (optional) stagen (gesamtes Repository)
+- Alle Änderungen (betrifft auch neu erstellte Dateien) auf den Stand des letzten Commits zurücksetzen
 
-```
-$ git ap [*Pfad*]
-```
-Alle Dateien oder nur die unterhalb des angegeben Pfades (optional) stagen, jedoch die Teile (Hunks) pro Datei separat wählen (gesamtes Repository)
+#### frb
 
-```
-$ git cm *Commit message*
-```
-Alle in der Staging Area befindlichen Dateien committen
+- Alle Änderungen des Remote Repository in das Arbeitsverzeichnis laden (unter Verwendung eines Rebase)
 
-```
-$ git cma *Commit message*
-```
-Letzten Commit bearbeiten
+#### dummy
 
-```
-$ git acm *Commit message*
-```
-Alle Dateien stagen und sofort committen (gesamtes Repository)
+- Erzeugt einen leeren Commit
+- Dient eher Testzwecken oder dem Simulieren von Commits, um ein push ausführen zu können
 
-```
-$ git acmp *Commit message*
-```
-Alle Dateien stagen, committen und pushen (gesamtes Repository)
+#Tipps
 
-#### Dateien aus dem nächsten Commit nehmen (Unstaging)
+#### git c -
 
-```
-$ git r  [*Pfad*]
-```
-Alle Dateien oder nur die unterhalb des angegeben Pfades (optional) aus der Staging Area nehmen
+- Zwischen den zuletzt genutzten Branches hin und her wechseln
 
-#### History anzeigen
+#### Branch auf Remote löschen
 
-```
-$ git l
-```
-Übersichtlich die komplette History anzeigen
-
-```
-$ git ls
-```
-Wie git l, zeigt aber nur die letzten 10 Commits an
-
-```
-$ git lm
-```
-Wie git l, listet aber nur Merge-Commits auf
-
-#### Änderungen rückgängig machen
-
-```
-$ git rh [*Pfad*]
-```
-Alle Dateien oder nur die unterhalb des angegeben Pfades (optional) auf den Stand des letzten Commits zurücksetzen (betrifft keine neu erstellten Dateien)
-
-```
-$ git undo
-```
-Alle Änderungen (betrifft auch neu erstellte Dateien) auf den Stand des letzten Commits zurücksetzen
-
-# Update & Publish
-
-#### Änderungen von einem Remote Repository holen
-
-```
-$ git f
-```
-Alle Änderungen des Remote Repository in das lokale Repository laden, dabei wird aber das Arbeitsverzeichnis nicht geändert
-
-```
-$ git frb
-```
-Alle Änderungen des Remote Repository in das Arbeitsverzeichnis laden (unter Verwendung eines Rebase)
-
-```
-$ git p origin:*Branchname*
-```
-Löscht den angegebenen *remote* Branch *Branchname*
-
-# Branching & Merging
-#### Branch-Verwaltung
-
-```
-$ git b *Branchname*
-```
-Branch mit dem Namen *Branchname* anlegen
-
-```
-$ git c *Branchname*
-```
-Zum Branch *Branchname* wechseln
-
-```
-$ git c -
-```
-Zwischen den zuletzt genutzten Branches hin und her wechseln
-
-```
-$ git b -d *Branchname*
-```
-Aktuellen bzw. übergebenen Branch *Branchname* löschen (nur lokal)
-
-```
-$ git b -a
-```
-Listet alle lokalen und remote Branches auf
-
-#### Merging
-
-```
-$ git m *Branch-Name*
-```
-Angegebenen Branch in den aktuellen Branch mergen
-
-```
-$ git mff *Branch-Name*
-```
-Angegebenen Branch in den aktuellen Branch mergen, wenn Fast-Forward möglich ist
-
-```
-$ git mr *Branch-Name*
-```
-Angegebenen Branch in den aktuellen Branch mergen, dabei immer einen Merge-Commit erzeugen
-
-```
-$ git mt
-```
-Öffnet das konfigurierte Standard Mergetool, um die Merge Konflikte aufzulösen.
-
-#### Rebase
-
-```
-$ git rb
-```
-Commit History neu schreiben, v.a. hilfreich, wenn beim fetch & merge eines Remote Branches kein Fast Forward möglich ist
-
-```
-$ git rbc
-```
-Bspw. nach dem Auflösen von Konflikten mit den Rebase Prozess fortfahren
+- `git p origin :*branchname*`
