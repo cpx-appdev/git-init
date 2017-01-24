@@ -1,5 +1,10 @@
 #!/bin/bash
 
+accent='\033[1;36m'
+pro='\033[1;31m'
+success='\033[0;32m'
+normal='\033[0m'
+
 proMode=false
 updateOnly=false
 
@@ -8,7 +13,7 @@ setProMode()
     if [[ $1 == "-p" ]] || [[ $1 == "--pro" ]]
     then
         proMode=true
-        echo "Pro Mode aktiviert"
+        echo -e "${pro}Pro Mode aktiviert${normal}"
     fi
 }
 
@@ -17,7 +22,7 @@ setUpdateOnly()
     if [[ $1 == "-u" ]] || [[ $1 == "--update-only" ]]
     then
         updateOnly=true
-        echo "Update-Only aktiviert"
+        echo -e "${accent}Update-Only aktiviert${normal}"
     fi
 }
 
@@ -39,9 +44,9 @@ setConfig()
         fi
 
         echo ""
-        echo "$question $default"
-        echo "ja"
-        echo "nein"
+        echo -e "${pro}$question $default${normal}"
+        echo -e "${pro}ja${normal}"
+        echo -e "${pro}nein${normal}"
         read choice
 
         case $choice in
@@ -56,14 +61,14 @@ setConfig()
 
     if $setValue
     then
-        $callback
+       $callback
     fi
 }
 
 setUsername()
 {
     local username
-    echo "Benutzername eingeben (Format: Vorname Nachname)"
+    echo -e "${accent}Benutzername eingeben (Format: Vorname Nachname)${normal}"
     read username
     git config --global user.name "$username"
 }
@@ -71,7 +76,7 @@ setUsername()
 setEmail()
 {
     local email
-    echo "E-Mail Adresse eingeben"
+    echo -e "${accent}E-Mail Adresse eingeben${normal}"
     read email
     git config --global user.email "$email"
 }
@@ -97,10 +102,10 @@ setVisualStudioDiffTool()
 
 setDiffTool()
 {
-    echo "Welches Diff Tool soll konfiguriert werden? [Standard: Meld]"
-    echo "1: Meld"
-    echo "2: KDiff3"
-    echo "3: Visual Studio"
+    echo -e "${accent}Welches Diff Tool soll konfiguriert werden? [Standard: Meld]${normal}"
+    echo -e "${accent}1: Meld${normal}"
+    echo -e "${accent}2: KDiff3${normal}"
+    echo -e "${accent}3: Visual Studio${normal}"
     read choice
 
     case $choice in
@@ -135,10 +140,10 @@ setVisualStudioMergeTool()
 
 setMergeTool()
 {
-    echo "Welches Merge Tool soll konfiguriert werden? [Standard: KDiff3]"
-    echo "1: Meld"
-    echo "2: KDiff3"
-    echo "3: Visual Studio"
+    echo -e "${accent}Welches Merge Tool soll konfiguriert werden? [Standard: KDiff3]${normal}"
+    echo -e "${accent}1: Meld${normal}"
+    echo -e "${accent}2: KDiff3${normal}"
+    echo -e "${accent}3: Visual Studio${normal}"
     read choice
 
     case $choice in
@@ -154,7 +159,7 @@ setMergeTool()
 
 setGeneralGitConfig()
 {
-    echo "Setze allgemeine Git Konfiguration"
+    echo -e "${accent}Setze allgemeine Git Konfiguration${normal}"
     git config --global push.default simple
     git config --global fetch.prune true
     git config --global url."https://".insteadOf git://
@@ -182,7 +187,7 @@ setBashAliase()
 
     rm -f ~/.cpx_aliases
 
-    echo "Setze Bash Aliase"
+    echo -e "${accent}Setze Bash Aliase${normal}"
 
     echo "#!/bin/bash" > ~/git-status-all.sh
     echo "dir=\${1-.}" >> ~/git-status-all.sh
@@ -251,7 +256,7 @@ setBashAliase()
 
 setGitAliase()
 {
-    echo "Setze Git Aliase"
+    echo -e "${accent}Setze Git Aliase${normal}"
 
     git config --global alias.s  "status -sb"
     git config --global alias.si  "status -sb --ignored"
@@ -314,4 +319,4 @@ setConfig "Allgemeine Git Konfiguration setzen?" setGeneralGitConfig
 setConfig "Bash Aliase setzen?" setBashAliase
 setConfig "Git Aliase setzen?" setGitAliase
 
-echo "Installation abgeschlossen"
+echo -e "${success}Installation abgeschlossen${normal}"
