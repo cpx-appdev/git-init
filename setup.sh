@@ -189,13 +189,14 @@ setBashAliase()
 
     echo -e "${accent}Setze Bash Aliase${normal}"
 
-    echo "#!/bin/bash" > ~/git-status-all.sh
-    echo "dir=\${1-.}" >> ~/git-status-all.sh
-    echo "find \$dir -maxdepth 1 -mindepth 0 -type d -exec sh -c \"test -d \\\"{}/.git\\\" && (echo \\\"--------------------------------\\\" && echo \\\"{}\\\" && cd \\\"{}\\\" && git status -sb && echo && echo \\\"Branches:\\\" && git branch -vv --color && echo && echo)\" \\; | less -R" >> ~/git-status-all.sh
+    echo "#!/bin/bash" > ~/.git-status-all.sh
+    echo "dir=\${1-.}" >> ~/.git-status-all.sh
+    echo "find \$dir -maxdepth 1 -mindepth 0 -type d -exec sh -c \"test -d \\\"{}/.git\\\" && (echo \\\"--------------------------------\\\" && echo \\\"{}\\\" && cd \\\"{}\\\" && git status -sb && echo && echo \\\"Branches:\\\" && git branch -vv --color && echo && echo)\" \\; | less -R" >> ~/.git-status-all.sh
 
 
     echo "alias g='git '" >> ~/.cpx_aliases
-    echo "alias gsa='~/git-status-all.sh'" >> ~/.cpx_aliases
+    echo "alias gsa='~/.git-status-all.sh'" >> ~/.cpx_aliases
+    
     echo "alias gs='git status -sb '" >> ~/.cpx_aliases
     echo "alias gdt='git difftool -dir--diff '" >> ~/.cpx_aliases
     echo "alias gdts='git difftool -dir--diff --staged '" >> ~/.cpx_aliases
