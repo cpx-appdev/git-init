@@ -313,6 +313,7 @@ setGitAliase()
     git config --global alias.cln "clean -xdfn"
     git config --global alias.st "stash"
     git config --global alias.stp "stash pop"
+    git config --global alias.upgrade "!bash -c 'source <(curl -s https://raw.githubusercontent.com/cpx-appdev/git-init/master/setup.sh) -u'"
 }
 
 setProMode $1
