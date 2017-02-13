@@ -56,6 +56,7 @@ Führt das Setup-Script aus:
 - st
 - stp
 - upgrade
+- gsa
 
 # Simple, without explanation
 
