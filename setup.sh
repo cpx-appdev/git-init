@@ -314,6 +314,9 @@ setGitAliase()
     git config --global alias.st "stash"
     git config --global alias.stp "stash pop"
     git config --global alias.upgrade "!bash -c 'source <(curl -s https://raw.githubusercontent.com/cpx-appdev/git-init/master/setup.sh) -u'"
+    git config --global alias.publish "push --set-upstream origin"
+    git config --global alias.deletebranch "!f() { git branch -d \$1 && git push origin --delete \$1; }; f"
+    git config --global alias.newbranch "!f() { git checkout -b \$1 && git push --set-upstream origin \$1; }; f"
 }
 
 setProMode $1
