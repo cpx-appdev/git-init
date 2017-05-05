@@ -201,6 +201,19 @@ setBashAliase()
     echo "find \$dir -maxdepth 1 -mindepth 0 -type d -exec sh -c \"test -d \\\"{}/.git\\\" && (echo \\\"--------------------------------\\\" && echo \\\"{}\\\" && cd \\\"{}\\\" && git status -sb && echo && echo \\\"Branches:\\\" && git branch -vv --color && echo && echo)\" \\; | less -R" >> ~/.git-status-all.sh
 
 
+    echo "#!/bin/bash" > ~/.git-fetch-merge.sh
+    echo "git fetch" >> ~/.git-fetch-merge.sh
+    echo "currentBranch=\$(git symbolic-ref HEAD)" >> ~/.git-fetch-merge.sh
+    echo "for branch in \$(git for-each-ref --format='%(refname)' refs/heads/); do" >> ~/.git-fetch-merge.sh
+    echo "if [ \$currentBranch != \$branch ]" >> ~/.git-fetch-merge.sh
+    echo "then" >> ~/.git-fetch-merge.sh
+    echo "git fetch origin +\$branch:\$branch" >> ~/.git-fetch-merge.sh
+    echo "fi" >> ~/.git-fetch-merge.sh
+    echo "done" >> ~/.git-fetch-merge.sh
+    echo "git fetch origin \$currentBranch" >> ~/.git-fetch-merge.sh
+    echo "git merge --ff-only" >> ~/.git-fetch-merge.sh
+
+
     echo "alias g='git '" >> ~/.cpx_aliases
     echo "alias gsa='~/.git-status-all.sh'" >> ~/.cpx_aliases
     echo "alias sif='~/.search-in-files.sh'" >> ~/.cpx_aliases
@@ -296,6 +309,7 @@ setGitAliase()
     git config --global alias.ba "branch -a"
     git config --global alias.bnm "branch --no-merged"
     git config --global alias.f "fetch"
+    git config --global alias.fm "!f() { . ~/.git-fetch-merge.sh; }; f"
     git config --global alias.m "merge"
     git config --global alias.ma "merge --abort"
     git config --global alias.mff "merge --ff-only"
@@ -313,6 +327,11 @@ setGitAliase()
     git config --global alias.cln "clean -xdfn"
     git config --global alias.st "stash"
     git config --global alias.stp "stash pop"
+    git config --global alias.t "tag"
+    git config --global alias.td "tag -d"
+    git config --global alias.tl "tag --list"
+    git config --global alias.tlr "!f() { git show-ref --tags | sed 's?.*refs/tags/??'; }; f"
+
     git config --global alias.upgrade "!bash -c 'source <(curl -s https://raw.githubusercontent.com/cpx-appdev/git-init/master/setup.sh) -u'"
 }
 
