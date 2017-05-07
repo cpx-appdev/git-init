@@ -29,7 +29,7 @@ $ git diff
 Zeigt alle Änderungen bei bereits getrackten Dateien an (Dateiinhalt)
 
 ```
-$ difftool
+$ git difftool
 ```
 Öffnet ein grafisches Tool um Änderungen anzuzeigen
 
