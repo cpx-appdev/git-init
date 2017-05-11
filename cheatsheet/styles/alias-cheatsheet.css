@@ -1,3 +1,57 @@
 h1 {
-    background: #00A37F;
+    background: #5a8c1e;
+}
+
+h1,
+h2,
+h3 {
+    padding: 4px 6px 2px;
+}
+
+#content {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+h1:nth-of-type(2) {
+    -webkit-column-break-before: always;
+    break-before: column;
+    margin-top: 0;
+}
+
+h1:nth-child(even) {
+    -webkit-column-break-before: auto !important;
+    break-before: initial !important;
+}
+
+table th:first-child {
+    border-right: 1px solid #aaa;
+}
+
+table th {
+    border-bottom: 1px solid #aaa;
+}
+
+table tr:nth-child(odd) td {
+    background: #ededed;
+}
+
+table td {
+    padding: 4px 8px;
+}
+
+table td:first-child {
+    border-right: 1px solid #aaa;
+    text-align: center;
+    font-weight: bold;
 }
