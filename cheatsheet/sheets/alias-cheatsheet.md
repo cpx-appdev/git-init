@@ -1,12 +1,3 @@
-# Setup für Alias-Cheatsheet
-
-```
-$ source <(curl -s https://raw.githubusercontent.com/tklepzig/git-init/master/setup.sh) -u
-```
-Führt das Setup-Script aus:
-  > **Ohne** den Parameter **-u** wird die grundlegende Einrichtung von Git und Anlegen der Aliase (alle Einstellungen können natürlich später auch geändert werden) vorgenommen.  
-
-  > **Mit** dem Parameter **-u** wird das Setup-Script im Update-Modus ausgeführt, sodass NUR die Aliase  aktualisiert werden.
 
 
 # Aliase für einzelne Befehle
@@ -17,17 +8,17 @@ s|status
 si|status + zeige ignorierte Dateien
 dt|difftool
 dts|difftool für Dateien in der Staging Area
-d [*pattern*]|diff
-ds [*pattern*]|diff für Dateien in der Staging Area
+d|diff
+ds|diff für Dateien in der Staging Area
 l|log
 lm|log (nur Merge-Commits)
 ln|log (zeige pro Commit auch die geänderten Dateien an)
 ld|log (in Datumsreihenfolge)
-r [*pattern*]|reset
+r|reset
 rh|reset --hard
 rs|reset --soft
-a [*pattern*]|add
-ap [*pattern*]|add --patch
+a|add
+ap|add --patch
 cm|commit -m
 cma|commit --amend
 p|push
@@ -85,3 +76,14 @@ stp|stash pop
 #### Branch auf Remote löschen
 
 - `git p origin :*branchname*`
+
+
+# Setup für Alias-Cheatsheet
+
+```
+$ source <(curl -s https://raw.githubusercontent.com/tklepzig/git-init/master/setup.sh) -u
+```
+Führt das Setup-Script aus:
+  > **Ohne** den Parameter **-u** wird die grundlegende Einrichtung von Git und Anlegen der Aliase (alle Einstellungen können natürlich später auch geändert werden) vorgenommen.  
+
+  > **Mit** dem Parameter **-u** wird das Setup-Script im Update-Modus ausgeführt, sodass NUR die Aliase  aktualisiert werden.
