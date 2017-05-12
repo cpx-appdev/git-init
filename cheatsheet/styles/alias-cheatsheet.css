@@ -1,5 +1,14 @@
+@media print {
+    body {
+        font-size: 11pt;
+    }
+    h1 {
+        font-size: 12pt;
+    }
+}
+
 h1 {
-    background: #5a8c1e;
+    background: #476d19;
 }
 
 h1,

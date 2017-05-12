@@ -3,7 +3,7 @@
 Alias|Befehl/Erklärung
 --|--
 s|status
-si|status + zeige ignorierte Dateien
+si|status und zusätzlich ignorierte Dateien anzeigen
 dt|difftool
 dts|difftool für Dateien in der Staging Area
 d|diff
@@ -12,6 +12,8 @@ l|log
 lm|log (nur Merge-Commits)
 ln|log (zeige pro Commit auch die geänderten Dateien an)
 ld|log (in Datumsreihenfolge)
+lp|log (zeige pro Commit auch alle Änderungen in den Dateien an)
+ls|log (liste nur die Commits auf, die über einen Zeiger erreichbar sind)
 r|reset
 rh|reset --hard
 rs|reset --soft
@@ -23,47 +25,60 @@ p|push
 pt|push --tags
 c|checkout
 b|branch
-bd|branch -d (**Lokalen** Branch löschen)
+bd|branch -d (**lokalen** Branch löschen)
 ba|branch (auch Remote-Branches)
 bnm|branch (zeige die Branches, die noch nicht gemerged sind)
 f|fetch
 m|merge
 ma|merge --abort
 mff|merge (nur Fast-Forward erlaubt)
-mr| (nur Recursive erlaubt)
+mr|merge (nur Recursive erlaubt)
 mt|mergetool
 rb|rebase
 rbc|rebase --continue
 rba|rebase --abort
 sw|show
-swn|show  (zeige auch die geänderten Dateien an)
+swn|show (zeige auch die geänderten Dateien an)
 cl|clean
 cln|clean, aber nur simulieren
 st|stash
 stp|stash pop
+t|tag
+td|tag -d
+tl|tag --list
+tlr|Listet alle tags auf, die auf Remote existieren
+
 
 # Aliase für komplexere Aufgaben
 
-#### acm *commit message*
+#### git acm *commit message*
 
 - Alle Dateien stagen und sofort committen (gesamtes Repository)
 
-#### acmp *commit message*
+#### git acmp *commit message*
 
 - Wie *acm*, aber zusätzlich auch noch pushen
 
-#### undo
+#### gsa *[Rekursionstiefe]*
+
+- Durchsucht den aktuellen ordner und alle Unterordner entsprechend der angegeben Rekursionstiefe (Standard: 1) nach Git Repositories und listet die ausstehenden Änderungen bzw. Commits auf
+
+#### git undo
 
 - Alle Änderungen (betrifft auch neu erstellte Dateien) auf den Stand des letzten Commits zurücksetzen
 
-#### frb
+#### git frb
 
 - Alle Änderungen des Remote Repository in das Arbeitsverzeichnis laden (unter Verwendung eines Rebase)
 
-#### dummy
+#### git dummy
 
 - Erzeugt einen leeren Commit
 - Dient eher Testzwecken oder dem Simulieren von Commits, um ein push ausführen zu können
+
+#### git upgrade
+
+- Führt das Setup-Script im Update-Modus, sodass die Aliase aktualisiert werden.
 
 #Tipps
 
@@ -71,17 +86,15 @@ stp|stash pop
 
 - Zwischen den zuletzt genutzten Branches hin und her wechseln
 
-#### Branch auf Remote löschen
+#### git p origin :*branch*
 
-- `git p origin :*branchname*`
+- Branch auf Remote löschen
 
 
-# Setup für Alias-Cheatsheet
+# Setup ausführen
 
+#### Grundlegende Einrichtung von Git und Anlegen der Aliase
 ```
-$ source <(curl -s https://raw.githubusercontent.com/tklepzig/git-init/master/setup.sh) -u
+$ source <(curl -s https://raw.githubusercontent.com/cpx-appdev/git-init/master/setup.sh)
 ```
-Führt das Setup-Script aus:
-  > **Ohne** den Parameter **-u** wird die grundlegende Einrichtung von Git und Anlegen der Aliase (alle Einstellungen können natürlich später auch geändert werden) vorgenommen.  
 
-  > **Mit** dem Parameter **-u** wird das Setup-Script im Update-Modus ausgeführt, sodass NUR die Aliase  aktualisiert werden.
